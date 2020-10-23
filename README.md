@@ -105,7 +105,7 @@ Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
 Cara menggunakan:
 
 ```javascript
-import {isLoading} from '@/store'
+import {isLoading} from '@/store.js'
 $isLoading = true // untuk mengaktifkan loader
 $isLoading = false // untuk mematikan loader
 ```
