@@ -32,7 +32,7 @@ Jadi, untuk `/`, dia akan menjalankan `src/halaman/Beranda.svelte`.
 
 ## Hot module reload
 
-Dia nggak mereset state saat kita developement. Cukup jalankan:
+Dia nggak mereset state saat kita development. Cukup jalankan:
 
 ```bash
 npm run dev
