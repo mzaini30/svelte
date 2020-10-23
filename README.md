@@ -128,7 +128,7 @@ import {nama} from '../../../nama.js'
 
 ## Tanggal
 
-Mendapatkan tanggal terkini dengan format 2020-8-17 0:19:45
+Mendapatkan tanggal terkini dengan format 2020-08-17 00:19:45
 
 Caranya:
 
