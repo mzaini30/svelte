@@ -64,7 +64,7 @@ nama = ['Ayam', 'Bebek', 'Cicak']
 
 ## Github action
 
-Pas push ke Github, dia akan otomatis menjalankan Github action untuk mendeploy Svelte.
+Pas push ke Github, dia akan otomatis menjalankan Github action untuk mendeploy Svelte dan menjalankan `encrypt.js`.
 
 ## Bootstrap
 
