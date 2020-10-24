@@ -4,7 +4,6 @@ devDependencies:
   '@rollup/plugin-alias': 3.1.1_rollup@2.32.1
   '@rollup/plugin-commonjs': 14.0.0_rollup@2.32.1
   '@rollup/plugin-node-resolve': 8.4.0_rollup@2.32.1
-  btoa: 1.2.1
   nollup: 0.13.13_rollup@2.32.1
   rollup: 2.32.1
   rollup-plugin-hot: 0.1.1_rollup@2.32.1
@@ -196,13 +195,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
-  /btoa/1.2.1:
-    dev: true
-    engines:
-      node: '>= 0.4.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-SB4/MIGlsiVkMcHmT+pSmIPoNDoHg+7cMzmt3Uxt628MTz2487DKSqK/fuhFBrkuqrYv5UCEnACpF4dTFNKc/g==
   /buffer-from/1.1.1:
     dev: true
     resolution:
@@ -1409,7 +1401,6 @@ specifiers:
   '@rollup/plugin-alias': ^3.1.1
   '@rollup/plugin-commonjs': ^14.0.0
   '@rollup/plugin-node-resolve': ^8.0.0
-  btoa: ^1.2.1
   nollup: ^0.13.13
   rollup: ^2.3.4
   rollup-plugin-hot: ^0.1.0
