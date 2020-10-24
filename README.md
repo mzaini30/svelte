@@ -91,7 +91,7 @@ Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
 Cara menggunakan:
 
 ```javascript
-import {isLoading} from '@/store.js'
+import {isLoading} from '@/store'
 $isLoading = true // untuk mengaktifkan loader
 $isLoading = false // untuk mematikan loader
 ```
@@ -103,13 +103,13 @@ Itu harus diletakkan di dalam folder `halaman`.
 Contoh:
 
 ```javascript
-import {nama} from '@/data/nama.js'
+import {nama} from '@/data/nama'
 ```
 
 Tapi, bisa juga relative path seperti:
 
 ```javascript
-import {nama} from '../../../nama.js'
+import {nama} from '../../../nama'
 ```
 
 ## Tanggal
@@ -120,7 +120,7 @@ Caranya:
 
 ```html
 <script>
-	import {tanggal} from '@/tanggal.js'
+	import {tanggal} from '@/tanggal'
 </script>
 <p>{tanggal()}</p>
 ```
