@@ -6,7 +6,7 @@
 	import Router from 'svelte-spa-router'
 	import Beranda from '@/halaman/Beranda.svelte'
 	import Loading from '@/Loading.svelte'
-	import {isLoading} from '@/store.js'
+	import {isLoading} from '@/store'
 	const routes = {
 		'/': Beranda
 	}
