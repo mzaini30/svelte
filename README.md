@@ -8,6 +8,14 @@ npm i
 
 # Fitur
 
+## Code splitting
+
+Cukup jalankan 
+
+```bash
+npm run build
+```
+
 ## Router hash
 
 Bisa dilihat di `src/App.svelte`:
@@ -19,16 +27,18 @@ Bisa dilihat di `src/App.svelte`:
 <Router {routes}/>
 <script type="text/javascript">
 	import Router from 'svelte-spa-router'
-	import Beranda from '@/halaman/Beranda.svelte'
+	import { wrap } from 'svelte-spa-router/wrap'
 	import Loading from '@/Loading.svelte'
-	import {isLoading} from '@/store.js'
+	import {isLoading} from '@/store'
 	const routes = {
-		'/': Beranda
+		'/': wrap({asyncComponent: () => import('@/halaman/Beranda.svelte')}),
+		'/about-me': wrap({asyncComponent: () => import('@/halaman/AboutMe.svelte')})
 	}
 </script>
+
 ```
 
-Jadi, untuk `/`, dia akan menjalankan `src/halaman/Beranda.svelte`.
+Jadi, untuk `localhost:5000`, dia akan menjalankan `src/halaman/Beranda.svelte` dan `localhost:5000/#/about-me` akan menjalankan `src/halaman/AboutMe.svelte`.
 
 ## Hot module reload
 
@@ -38,33 +48,9 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## Enkripsi
-
-Cara menjalankan:
-
-```bash
-npm run build
-node encrypt.js
-```
-
-Dia akan mengubah data seperti berikut:
-
-```javascript
-nama = [
-	['Zen', 'Maryam']
-]
-// menjadi: nama = eval(atob("W1siWmVuIiwiTWFyeWFtIl1d"))
-
-nama = 'https://zen.com'
-// menjadi: nama = eval(atob("Imh0dHBzOi8vemVuLmNvbSI="))
-
-nama = ['Ayam', 'Bebek', 'Cicak']
-// menjadi: nama = eval(atob("WyJBeWFtIiwiQmViZWsiLCJDaWNhayJd"))
-```
-
 ## Github action
 
-Pas push ke Github, dia akan otomatis menjalankan Github action untuk mendeploy Svelte dan menjalankan `encrypt.js`.
+Pas push ke Github, dia akan otomatis menjalankan Github action untuk mendeploy Svelte.
 
 ## Bootstrap
 
@@ -90,7 +76,7 @@ Ini isi dari `public/index.html`:
 	<link rel='stylesheet' href='global.css'>
 	<link rel='stylesheet' href='build/bundle.css'>
 
-	<script defer src='build/bundle.js'></script>
+	<script defer src='build/main.js' type="module" ></script>
 </head>
 
 <body>

@@ -59,9 +59,11 @@ export default {
   input: 'src/main.js',
   output: {
     sourcemap: true,
-    format: 'iife',
+    format: 'es',
+    // format: 'iife',
     name: 'app',
-    file: 'public/build/bundle.js',
+    // file: 'public/build/bundle.js',
+    dir: 'public/build'
   },
   plugins: [
     alias({

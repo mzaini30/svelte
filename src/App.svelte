@@ -4,10 +4,11 @@
 <Router {routes}/>
 <script type="text/javascript">
 	import Router from 'svelte-spa-router'
-	import Beranda from '@/halaman/Beranda.svelte'
+	import { wrap } from 'svelte-spa-router/wrap'
 	import Loading from '@/Loading.svelte'
 	import {isLoading} from '@/store'
 	const routes = {
-		'/': Beranda
+		'/': wrap({asyncComponent: () => import('@/halaman/Beranda.svelte')}),
+		'/about-me': wrap({asyncComponent: () => import('@/halaman/AboutMe.svelte')})
 	}
 </script>
