@@ -6,6 +6,14 @@ cd my-project
 npm i
 ```
 
+# Struktur folder
+
+| Keterangan | Folder |
+|---|---|
+| File Svelte | src/pages |
+| Static files | public |
+| Output | hasil |
+
 # Fitur
 
 ## Code splitting
