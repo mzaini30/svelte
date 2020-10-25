@@ -16,29 +16,9 @@ Cukup jalankan
 npm run build
 ```
 
-## Router hash
+## Router berbasis file
 
-Bisa dilihat di `src/App.svelte`:
-
-```html
-{#if $isLoading}
-	<Loading/>
-{/if}
-<Router {routes}/>
-<script type="text/javascript">
-	import Router from 'svelte-spa-router'
-	import { wrap } from 'svelte-spa-router/wrap'
-	import Loading from '@/Loading.svelte'
-	import {isLoading} from '@/store'
-	const routes = {
-		'/': wrap({asyncComponent: () => import('@/halaman/Beranda.svelte')}),
-		'/about-me': wrap({asyncComponent: () => import('@/halaman/AboutMe.svelte')})
-	}
-</script>
-
-```
-
-Jadi, untuk `localhost:5000`, dia akan menjalankan `src/halaman/Beranda.svelte` dan `localhost:5000/#/about-me` akan menjalankan `src/halaman/AboutMe.svelte`.
+Kita menggunakan Routify.
 
 ## Hot module reload
 

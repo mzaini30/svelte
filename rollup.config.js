@@ -15,7 +15,7 @@ import path from 'path';
 // have to add the --history-api-fallback yourself in your package.json
 // scripts (see: https://github.com/PepsRyuu/nollup/#nollup-options)
 //
-const spa = false
+const spa = true
 
 // NOTE The NOLLUP env variable is picked by various HMR plugins to switch
 // in compat mode. You should not change its name (and set the env variable
