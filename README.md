@@ -76,7 +76,7 @@ Ini isi dari `public/index.html`:
 	<link rel='stylesheet' href='global.css'>
 	<link rel='stylesheet' href='build/bundle.css'>
 
-	<script defer src='build/main.js' type="module" ></script>
+	<script defer src='main.js' type="module" ></script>
 </head>
 
 <body>

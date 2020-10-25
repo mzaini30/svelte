@@ -59,11 +59,16 @@ export default {
   input: 'src/main.js',
   output: {
     sourcemap: true,
-    format: 'es',
-    // format: 'iife',
     name: 'app',
-    // file: 'public/build/bundle.js',
-    dir: 'public/build'
+    // entryFileNames: 'main.js',
+
+    // code splitting
+    format: 'es',
+    dir: 'hasil', // ini diabaikan sama hmr
+
+    // bukan code splitting
+    // format: 'iife',
+    // file: 'public/build/main.js',
   },
   plugins: [
     alias({
@@ -82,7 +87,7 @@ export default {
       // NOTE when hot option is enabled, this gets automatically be turned to
       // false because CSS extraction doesn't work with HMR currently
       css: css => {
-        css.write('public/build/bundle.css')
+        css.write('hasil/build/bundle.css') // diabaikan pas hmr
       },
       hot: isHot && {
         // Optimistic will try to recover from runtime

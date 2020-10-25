@@ -5,6 +5,7 @@
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "fs-extra": "^9.0.1",
     "nollup": "^0.13.13",
     "rollup": "^2.3.4",
     "rollup-plugin-hot": "^0.1.0",
@@ -18,11 +19,11 @@
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && node salin.js",
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --port 5000 --content-base ./public",
-    "dev": "npm run dev:rollup",
+    "dev": "npm run dev:nollup",
     "start": "sirv public"
   }
 }
