@@ -48,10 +48,6 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## Github action
-
-Pas push ke Github, dia akan otomatis menjalankan Github action untuk mendeploy Svelte.
-
 ## Bootstrap
 
 Udah ada Bootstrap. Tinggal pakai aja.
