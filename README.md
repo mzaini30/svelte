@@ -47,36 +47,38 @@ Ini isi dari `public/index.html`:
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 
 	<title></title>
 	<meta name="description" content="">
-	<meta property="og:image" content="favicon.png">
+	<meta property="og:image" content="/favicon.png">
 
 	<!--/ Vooler template Start /-->
-	<link rel="stylesheet" href="/assets/css/bootstrap.css">
-	<link rel="stylesheet" href="/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-	<link rel="stylesheet" href="/datatable.css">
-	<link rel="stylesheet" href="/assets/css/app.css">
+	<link rel="stylesheet" href="/dist/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" href="/dist/datatable.css">
+	<link rel="stylesheet" href="/dist/assets/css/app.css">
 
-	<script src="/assets/js/feather-icons/feather.min.js"></script>
-	<script src="/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-	<script src="/assets/js/app.js"></script>
-	<script src="/assets/vendors/simple-datatables/simple-datatables.js"></script>
+	<script src="/dist/assets/js/feather-icons/feather.min.js"></script>
+	<script src="/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="/dist/assets/js/app.js"></script>
+	<!-- <script src="/dist/assets/vendors/simple-datatables/simple-datatables.js"></script> -->
 	<!--/ Vooler template End /-->
 
 	<link rel='icon' type='image/png' href='/favicon.png'>
-	<!-- <link rel='stylesheet' href='bootstrap.min.css'> -->
-	<link rel='stylesheet' href='/global.css'>
+	<!-- <link rel='stylesheet' href='/dist/bootstrap.min.css'> -->
+	<link rel='stylesheet' href='/dist/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
 
-	<script defer src='/main.js' type="module" ></script>
+	<script defer src='/main.js' type="module"></script>
 </head>
 
 <body>
 </body>
+
 </html>
 ```
 
@@ -116,7 +118,7 @@ Caranya:
 
 ```html
 <script>
-	import {tanggal} from '@/tanggal'
+	import {tanggal} from '@/tools/tanggal'
 </script>
 <p>{tanggal()}</p>
 ```
@@ -125,7 +127,7 @@ Caranya:
 ```html
 // file: src/pages/danang/index.svelte
 <script>
-    import { DataTable } from "../../datatable/index";
+    import { DataTable } from "@/tools/datatable/index";
     import data from "./data.json";
 
     let promise = data;
