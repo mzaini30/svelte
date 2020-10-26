@@ -55,12 +55,24 @@ Ini isi dari `public/index.html`:
 	<meta name="description" content="">
 	<meta property="og:image" content="favicon.png">
 
-	<link rel='icon' type='image/png' href='favicon.png'>
-	<link rel='stylesheet' href='bootstrap.min.css'>
-	<link rel='stylesheet' href='global.css'>
-	<link rel='stylesheet' href='build/bundle.css'>
+	<!--/ Vooler template Start /-->
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" href="/datatable.css">
+	<link rel="stylesheet" href="/assets/css/app.css">
 
-	<script defer src='main.js' type="module" ></script>
+	<script src="/assets/js/feather-icons/feather.min.js"></script>
+	<script src="/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="/assets/js/app.js"></script>
+	<script src="/assets/vendors/simple-datatables/simple-datatables.js"></script>
+	<!--/ Vooler template End /-->
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<!-- <link rel='stylesheet' href='bootstrap.min.css'> -->
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+
+	<script defer src='/main.js' type="module" ></script>
 </head>
 
 <body>
@@ -108,6 +120,57 @@ Caranya:
 </script>
 <p>{tanggal()}</p>
 ```
+
+## Datatable
+// file: src/pages/danang/index.svelte
+<script>
+	.
+	.
+    import { DataTable } from "../../datatable/index";
+    import data from "./data.json";
+
+    onMount(() => {
+        // Simple Datatable
+        const dataTable = new DataTable("#table1");
+    });
+</script>
+.
+.
+	<table class="table table-striped" id="table1">
+		<thead>
+			<tr>
+				<th>Nomor</th>
+				<th>Name</th>
+				<th>Position</th>
+				<th>Company</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each data as d, i}
+				<tr>
+					<td>{i + 1}</td>
+					<td>{d.name}</td>
+					<td>{d.position}</td>
+					<td>{d.company}</td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+.
+.
+
+// file: src/pages/danang/data.json.js
+const data = [{
+    name: "Hedwig F. Nguyen",
+    position: "Manager",
+    company: "Arcu Vel Foundation"
+},
+{
+    name: "Genevieve U. Watts",
+    position: "Manager",
+    company: "Eget Incorporated"
+}];
+export default data;
 
 # Terjemahan?
 
