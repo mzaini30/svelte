@@ -125,8 +125,6 @@ Caranya:
 ```html
 // file: src/pages/danang/index.svelte
 <script>
-	.
-	.
     import { DataTable } from "../../datatable/index";
     import data from "./data.json";
 
@@ -137,43 +135,39 @@ Caranya:
         const dataTable = new DataTable("#table1");
     });
 </script>
-.
-.
-	<table class="table table-striped" id="table1">
-		<thead>
-			<tr>
-				<th>Nomor</th>
-				<th>Name</th>
-				<th>Position</th>
-				<th>Company</th>
-			</tr>
-		</thead>
-		<tbody>
-			{#await promise}
-				<p>...waiting</p>
-			{:then data}
-				{#each data as d, i}
-					<tr>
-						<td>{i + 1}</td>
-						<td>{d.name}</td>
-						<td>{d.position}</td>
-						<td>{d.company}</td>
-					</tr>
-				{:else}
-					<tr>
-						<td colspan="100%">Data tidak ada!</td>
-					</tr>
-				{/each}
-			{:catch error}
-				<p style="color: red">{error.message}</p>
-			{/await}
-		</tbody>
-	</table>
-.
-.
+<table class="table table-striped" id="table1">
+	<thead>
+		<tr>
+			<th>Nomor</th>
+			<th>Name</th>
+			<th>Position</th>
+			<th>Company</th>
+		</tr>
+	</thead>
+	<tbody>
+		{#await promise}
+			<p>...waiting</p>
+		{:then data}
+			{#each data as d, i}
+				<tr>
+					<td>{i + 1}</td>
+					<td>{d.name}</td>
+					<td>{d.position}</td>
+					<td>{d.company}</td>
+				</tr>
+			{:else}
+				<tr>
+					<td colspan="100%">Data tidak ada!</td>
+				</tr>
+			{/each}
+		{:catch error}
+			<p style="color: red">{error.message}</p>
+		{/await}
+	</tbody>
+</table>
 ```
 
-```html
+```javascript
 // file: src/pages/danang/data.json.js
 const data = [{
     name: "Hedwig F. Nguyen",

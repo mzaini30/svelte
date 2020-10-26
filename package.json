@@ -13,14 +13,14 @@
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte-hot": "^0.10.0",
     "rollup-plugin-terser": "^7.0.0",
+    "dayjs": "^1.8.28",
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0",
-    "dayjs": "^1.8.28"
+    "sirv-cli": "^1.0.0"
   },
   "scripts": {
-    "build": "routify -b --dynamic-imports && rollup -c && node salin.js",
+    "build": "routify -b --dynamic-imports && rollup -c && node script/salin.js",
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
