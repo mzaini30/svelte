@@ -15,5 +15,5 @@ module.exports = {
   "distDir": "dist",
   "childProcess": "dev:nollup",
   "hashScroll": true,
-  "started": "2020-10-26T11:28:09.622Z"
+  "started": "2020-10-26T11:48:03.786Z"
 }
