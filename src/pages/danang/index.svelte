@@ -5,6 +5,8 @@
     import { DataTable } from "../../datatable/index";
     import data from "./data.json";
 
+    let promise = data;
+
     onMount(() => {
         // Simple Datatable
         const dataTable = new DataTable("#table1");
@@ -142,14 +144,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {#each data as d, i}
-                                    <tr>
-                                        <td>{i + 1}</td>
-                                        <td>{d.name}</td>
-                                        <td>{d.position}</td>
-                                        <td>{d.company}</td>
-                                    </tr>
-                                {/each}
+                                {#await promise}
+                                    <p>...waiting</p>
+                                {:then data}
+                                    {#each data as d, i}
+                                        <tr>
+                                            <td>{i + 1}</td>
+                                            <td>{d.name}</td>
+                                            <td>{d.position}</td>
+                                            <td>{d.company}</td>
+                                        </tr>
+                                    {:else}
+                                        <tr>
+                                            <td colspan="100%">
+                                                Data tidak ada!
+                                            </td>
+                                        </tr>
+                                    {/each}
+                                {:catch error}
+                                    <p style="color: red">{error.message}</p>
+                                {/await}
                             </tbody>
                         </table>
                     </div>

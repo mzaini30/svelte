@@ -4,7 +4,7 @@
 	setInterval(() => $angka++, 1000);
 </script>
 
-<p>Hello world!...</p>
+<p>Hello World!</p>
 <p>{$angka}</p>
 <p><a href={$url('/aku')}>about me</a></p>
 <p><a href={$url('/hai/zen')}>hello zen</a></p>

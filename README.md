@@ -122,6 +122,7 @@ Caranya:
 ```
 
 ## Datatable
+```html
 // file: src/pages/danang/index.svelte
 <script>
 	.
@@ -129,7 +130,9 @@ Caranya:
     import { DataTable } from "../../datatable/index";
     import data from "./data.json";
 
-    onMount(() => {
+    let promise = data;
+
+	onMount(() => {
         // Simple Datatable
         const dataTable = new DataTable("#table1");
     });
@@ -146,19 +149,31 @@ Caranya:
 			</tr>
 		</thead>
 		<tbody>
-			{#each data as d, i}
-				<tr>
-					<td>{i + 1}</td>
-					<td>{d.name}</td>
-					<td>{d.position}</td>
-					<td>{d.company}</td>
-				</tr>
-			{/each}
+			{#await promise}
+				<p>...waiting</p>
+			{:then data}
+				{#each data as d, i}
+					<tr>
+						<td>{i + 1}</td>
+						<td>{d.name}</td>
+						<td>{d.position}</td>
+						<td>{d.company}</td>
+					</tr>
+				{:else}
+					<tr>
+						<td colspan="100%">Data tidak ada!</td>
+					</tr>
+				{/each}
+			{:catch error}
+				<p style="color: red">{error.message}</p>
+			{/await}
 		</tbody>
 	</table>
 .
 .
+```
 
+```html
 // file: src/pages/danang/data.json.js
 const data = [{
     name: "Hedwig F. Nguyen",
@@ -171,6 +186,7 @@ const data = [{
     company: "Eget Incorporated"
 }];
 export default data;
+```
 
 # Terjemahan?
 
