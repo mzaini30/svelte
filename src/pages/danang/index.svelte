@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
     import { url } from "@sveltech/routify";
     import { goPerfect } from "./perfect-scrollbar";
-    import { DataTable } from "../../datatable/index";
+    import { DataTable } from "@/tools/datatable/index";
     import data from "./data.json";
 
     let promise = data;
@@ -69,7 +69,7 @@
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <div class="avatar mr-1">
                                 <img
-                                    src="/assets/images/avatar/avatar-s-1.png"
+                                    src="/dist/assets/images/avatar/avatar-s-1.png"
                                     alt=""
                                     srcset="" />
                             </div>
@@ -118,7 +118,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <!-- svelte-ignore a11y-invalid-attribute -->
-                                    <a href="#">Beranda</a>
+                                    <a href="/">Beranda</a>
                                 </li>
                                 <li
                                     class="breadcrumb-item active"
