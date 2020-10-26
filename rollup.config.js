@@ -65,6 +65,11 @@ export default {
     // code splitting
     format: 'es',
     dir: 'hasil', // ini diabaikan sama hmr
+		/* 
+		* kode untuk mengatasi error sbb:
+		* Error: UMD and IIFE output formats are not supported for code-splitting builds.
+		* Sumber: https://github.com/lukeed/navaid/issues/5
+		*/
 
     // bukan code splitting
     // format: 'iife',
