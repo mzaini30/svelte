@@ -107,6 +107,20 @@ Caranya:
 <p>{tanggal()}</p>
 ```
 
+## Slug
+
+Mendapatkan slug dari string
+
+Caranya:
+
+```html
+<script>
+	import {slug} from '@/tools/slug'
+</script>
+<p>{slug('hello world')}</p>
+<!-- jadinya: hello-world -->
+```
+
 # Terjemahan?
 
 Boleh. Misalnya aja mau nerjemahkan ke bahasa Jepang, maka buat file `README-jp.md` yang berisi terjemahan README ini dalam bahasa Jepang.
