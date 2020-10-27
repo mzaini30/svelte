@@ -121,6 +121,20 @@ Caranya:
 <!-- jadinya: hello-world -->
 ```
 
+## Datatable (on progress)
+
+```html
+<script type="text/javascript">
+	import Datatable from '@/tools/Datatable.svelte'
+	let data = [
+		{nama: 'Zen', alamat: 'Samarinda', kelas: 2},
+		{nama: 'Yani', alamat: 'Balikpapan', kelas: 1},
+		{nama: 'Maryam', alamat: 'Tenggarong', kelas: 3}
+	]
+</script>
+<Datatable {data}/>
+```
+
 # Terjemahan?
 
 Boleh. Misalnya aja mau nerjemahkan ke bahasa Jepang, maka buat file `README-jp.md` yang berisi terjemahan README ini dalam bahasa Jepang.
