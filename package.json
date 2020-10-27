@@ -20,7 +20,7 @@
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
-    "build": "routify -b --dynamic-imports && rollup -c && node script/salin.js",
+    "build": "routify -b --dynamic-imports && rollup -c && node salin.js",
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
