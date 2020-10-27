@@ -5,7 +5,6 @@ devDependencies:
   '@rollup/plugin-commonjs': 14.0.0_rollup@2.32.1
   '@rollup/plugin-node-resolve': 8.4.0_rollup@2.32.1
   '@sveltech/routify': 1.9.9
-  dayjs: 1.9.4
   fs-extra: 9.0.1
   nollup: 0.13.13_rollup@2.32.1
   rollup: 2.32.1
@@ -490,10 +489,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-X5eWTSXO/BJmpdIKCRuKUgSCgAN0OwliVK3yPKbwIWU1Tdw5BRajxlzMidvh+gwko9AfQ9zIj52pzF91Q3YAvQ==
-  /dayjs/1.9.4:
-    dev: true
-    resolution:
-      integrity: sha512-ABSF3alrldf7nM9sQ2U+Ln67NRwmzlLOqG7kK03kck0mw3wlSSEKv/XhKGGxUjQcS57QeiCyNdrFgtj9nWlrng==
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -2188,7 +2183,6 @@ specifiers:
   '@rollup/plugin-commonjs': ^14.0.0
   '@rollup/plugin-node-resolve': ^8.0.0
   '@sveltech/routify': ^1.9.9
-  dayjs: ^1.8.28
   fs-extra: ^9.0.1
   nollup: ^0.13.13
   rollup: ^2.3.4

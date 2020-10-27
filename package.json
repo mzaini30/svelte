@@ -13,7 +13,6 @@
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte-hot": "^0.10.0",
     "rollup-plugin-terser": "^7.0.0",
-    "dayjs": "^1.8.28",
     "svelte": "^3.0.0"
   },
   "dependencies": {
