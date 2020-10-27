@@ -1,6 +1,6 @@
-/node_modules/
-/public/build/
-/hasil/
 .DS_Store
 .routify
-/dist2/bootstrap.min.css
+/hasil/
+/node_modules/
+/public/build/
+/public/dist2/bootstrap.min.css
