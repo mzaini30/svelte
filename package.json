@@ -21,7 +21,7 @@
   },
   "scripts": {
     "purgecss": "purgecss --css public/dist/bootstrap.min.css --content src/**/*.svelte --output public/dist2",
-    "build": "routify -b --dynamic-imports && rollup -c && npm run purgecss && node script/salin.js && node script/pakaiPurge.js",
+    "build": "mkdir public/dist2 && routify -b --dynamic-imports && rollup -c && npm run purgecss && node script/salin.js && node script/pakaiPurge.js",
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
