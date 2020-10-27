@@ -1,2 +1,0 @@
-import{S as s,i as e,s as t,e as a,b as n,n as r,f as o,g as i,k as u,o as c,j as f}from"./main-f814e41e.js";function m(s){let e;return{c(){e=a("center"),e.innerHTML="<br/> \n\t<p>about me</p>"},m(s,t){n(s,e,t)},p:r,i:r,o:r,d(s){s&&o(e)}}}function p(s,e,t){let a;return i(s,u,(s=>t(0,a=s))),c((()=>{f(u,a=!0,a),setTimeout((()=>{f(u,a=!1,a)}),3e3)})),[]}export default class extends s{constructor(s){super(),e(this,s,p,m,t,{})}}
-//# sourceMappingURL=AboutMe-7a2d94f4.js.map
