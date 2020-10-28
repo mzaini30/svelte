@@ -1,4 +1,3 @@
-<div class="container">
-	<br>
-	<slot></slot>
-</div>
+<main class="container">
+	<slot/>
+</main>
