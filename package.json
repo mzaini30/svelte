@@ -20,7 +20,6 @@
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
-    "purgecss": "purgecss --css public/dist/bootstrap.min.css --content src/**/*.svelte --output public/dist2",
     "build": "routify -b --dynamic-imports && rollup -c && node script/salin.js && mkdir -p hasil/dist2 && node script/pakaiPurge.js",
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
