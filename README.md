@@ -125,6 +125,18 @@ Caranya:
 <!-- jadinya: hello-world -->
 ```
 
+## Acak
+
+Digunakan untuk mengacak array
+
+Caranya:
+
+```javascript
+import {acak} from "@/tools/acak"
+let angka = [1, 2, 3, 4, 5]
+angka = acak(angka)
+```
+
 ## Datatable (on progress)
 
 ```html
