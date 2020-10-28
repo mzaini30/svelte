@@ -36,9 +36,13 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## Bootstrap
+## Style
 
-Udah ada Bootstrap. Tinggal pakai aja.
+Bootstrap dan Tailwind. Tinggal pilih aja di bagian `public/index.html`.
+
+## Purge CSS
+
+Saat mode production (build), rules css yang nggak digunakan akan terhapus dengan sendirinya sehingga menghemat ukuran file css. Untuk settingnya, bisa dibuka `script/pakaiPurge.js`.
 
 ## SEO
 

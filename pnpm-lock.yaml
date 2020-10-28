@@ -8,6 +8,7 @@ devDependencies:
   fs-extra: 9.0.1
   nollup: 0.13.13_rollup@2.32.1
   purgecss: 3.0.0
+  recursive-readdir: 2.2.2
   rollup: 2.32.1
   rollup-plugin-hot: 0.1.1_rollup@2.32.1
   rollup-plugin-livereload: 2.0.0
@@ -1594,6 +1595,14 @@ packages:
       node: '>=8.10.0'
     resolution:
       integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
+  /recursive-readdir/2.2.2:
+    dependencies:
+      minimatch: 3.0.4
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-nRCcW9Sj7NuZwa2XvH9co8NPeXUBhZP7CRKJtU+cS6PW9FpCIFoI5ib0NT1ZrbNuPoRy0ylyCaUL8Gih4LSyFg==
   /request-promise-core/1.1.4_request@2.88.2:
     dependencies:
       lodash: 4.17.20
@@ -2251,6 +2260,7 @@ specifiers:
   fs-extra: ^9.0.1
   nollup: ^0.13.13
   purgecss: ^3.0.0
+  recursive-readdir: ^2.2.2
   rollup: ^2.3.4
   rollup-plugin-hot: ^0.1.0
   rollup-plugin-livereload: ^2.0.0
