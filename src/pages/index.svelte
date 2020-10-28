@@ -14,7 +14,7 @@
 		background-color: #c6f6d5;
 	}
 	:global(a){
-		text-decoration: underline;
+		color: #2f855a;
 	}
 </style>
 <script type="text/javascript">
