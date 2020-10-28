@@ -7,7 +7,7 @@ abaikan: css yang nggak kena pengaruh purge
 safelist: rule css yang nggak kena purge
 */
 abaikan = ['global.css']
-safelist = ['body']
+safelist = []
 
 recursive("public/dist", (_, x) => {
 	x = x.filter(x => x.match(/\.css/g)).filter(x => {
@@ -19,7 +19,7 @@ recursive("public/dist", (_, x) => {
 		return true
 	})
 	new PurgeCSS().purge({
-	  content: ['src/**/*.svelte'],
+	  content: ['src/**/*.svelte', 'public/index.html'],
 	  css: [...x],
 	  safelist: [...safelist]
 	}).then(x => {
