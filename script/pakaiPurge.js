@@ -4,9 +4,12 @@ const { PurgeCSS } = require('purgecss')
 
 /*
 abaikan: css yang nggak kena pengaruh purge
+["global.css", "assets/halo.css"]
+
 safelist: rule css yang nggak kena purge
+["html", ".hai"]
 */
-abaikan = ['global.css']
+abaikan = []
 safelist = []
 
 recursive("public/dist", (_, x) => {
