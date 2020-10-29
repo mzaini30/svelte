@@ -38,7 +38,7 @@ npm run dev
 
 ## Style
 
-Bootstrap dan Tailwind. Tinggal pilih aja di bagian `public/index.html`.
+Untuk style, kita menggunakan Tailwind dikarenakan fleksibilitasnya dalam membuat website.
 
 ## Purge CSS
 
