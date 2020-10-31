@@ -40,6 +40,10 @@ npm run dev
 
 Untuk style, kita menggunakan Tailwind dikarenakan fleksibilitasnya dalam membuat website.
 
+## Icon
+
+Icon yang digunakan adalah Font Awesome. Cara menggunakannya, pertama, hilangkan dulu komentar Font Awesome di `public/index.html`.
+
 ## Purge CSS
 
 Saat mode production (build), rules css yang nggak digunakan akan terhapus dengan sendirinya sehingga menghemat ukuran file css. Untuk settingnya, bisa dibuka `script/pakaiPurge.js`.
