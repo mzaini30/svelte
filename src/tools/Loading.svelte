@@ -18,7 +18,7 @@
 	  top: 0;
 	  left: 0;
 	  margin-top: 0;
-	  z-index: 100000;
+	  z-index: 99999999999999999999999999999999999999999999;
 	}
 	  .progress-loading .indeterminate {
 	    background-color: #26a69a; }
