@@ -42,7 +42,7 @@ Untuk style, kita menggunakan Tailwind dikarenakan fleksibilitasnya dalam membua
 
 ## Icon
 
-Icon yang digunakan adalah Font Awesome. Cara menggunakannya, pertama, hilangkan dulu komentar Font Awesome di `public/index.html`.
+Menggunakan Remix Icon.
 
 ## Purge CSS
 
