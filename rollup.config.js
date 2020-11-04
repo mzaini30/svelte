@@ -6,6 +6,8 @@ import { terser } from 'rollup-plugin-terser'
 import hmr from 'rollup-plugin-hot'
 import alias from '@rollup/plugin-alias';
 import path from 'path';
+import sveltePreprocess from 'svelte-preprocess';
+import tailwind from 'tailwindcss';
 
 // Set this to true to pass the --single flag to sirv (this serves your
 // index.html for any unmatched route, which is a requirement for SPA
@@ -105,6 +107,14 @@ export default {
         //
         // https://github.com/rixo/rollup-plugin-svelte-hot#usage
       },
+      preprocess: sveltePreprocess({
+          postcss: {
+              plugins: [
+                  tailwind('./tailwind.config.js')
+              ]
+          },
+      }),
+
     }),
 
     // If you have external dependencies installed from
