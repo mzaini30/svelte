@@ -12,10 +12,10 @@ safelist: rule css yang nggak kena purge
 abaikan = []
 // safelist = []
 
-recursive("public/dist", (_, x) => {
+recursive("public", (_, x) => {
 	x = x.filter(x => x.match(/\.css/g)).filter(x => {
 		for (y of abaikan){
-			if (x == `public/dist/${y}`) {
+			if (x == `public/${y}`) {
 				return false
 			}
 		}
