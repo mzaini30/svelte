@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser'
 import hmr from 'rollup-plugin-hot'
 import alias from '@rollup/plugin-alias';
 import path from 'path';
+// import hotcss from 'rollup-plugin-hot-css';
 
 // Set this to true to pass the --single flag to sirv (this serves your
 // index.html for any unmatched route, which is a requirement for SPA
@@ -84,6 +85,10 @@ export default {
         }
       ]
     }),
+    // hotcss({
+    //   file: 'dist/tailwind.css',
+    //   hot: true
+    // }),
     svelte({
       // enable run-time checks when not in production
       dev: !isProduction,

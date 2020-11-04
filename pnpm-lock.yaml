@@ -11,7 +11,6 @@ devDependencies:
   recursive-readdir: 2.2.2
   rollup: 2.32.1
   rollup-plugin-hot: 0.1.1_rollup@2.32.1
-  rollup-plugin-hot-css: 0.4.0
   rollup-plugin-livereload: 2.0.0
   rollup-plugin-svelte-hot: 0.10.0_rollup@2.32.1+svelte@3.29.0
   rollup-plugin-terser: 7.0.2_rollup@2.32.1
@@ -562,15 +561,6 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
-  /css-tree/1.0.0-alpha.39:
-    dependencies:
-      mdn-data: 2.0.6
-      source-map: 0.6.1
-    dev: true
-    engines:
-      node: '>=8.0.0'
-    resolution:
-      integrity: sha512-7UvkEYgBAHRG9Nt980lYxjsTrCyHFN53ky3wVsDkiMdVqylqRt+Zc+jm5qw7/qyOvN2dHSYtX0e4MbCCExSvnA==
   /css-unit-converter/1.1.2:
     dev: true
     resolution:
@@ -1410,10 +1400,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
-  /mdn-data/2.0.6:
-    dev: true
-    resolution:
-      integrity: sha512-rQvjv71olwNHgiTbfPZFkJtjNMciWgswYeciZhtvWLO8bmX3TnhyA62I6sTWOyZssWHJJjY6/KiWwqQsWWsqOA==
   /media-typer/0.3.0:
     dev: true
     engines:
@@ -1942,13 +1928,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-lDfCPaMKfOJXjy0dPayzPdF1phampNWr3qFCjAu+rw/qbQmr5jWH5xN2hwh9QKfw9E5v4hwV7A+jrCmL8yjjqA==
-  /rollup-plugin-hot-css/0.4.0:
-    dependencies:
-      css-tree: 1.0.0-alpha.39
-      source-map: 0.5.7
-    dev: true
-    resolution:
-      integrity: sha512-TsDYIm2FJJ1IJRwfguDb4UiFED1GEsJPjPcAi8p298MxTt0QuekVOLtlMgWvCjWlLdY3vrqVrs3bh51V0Py3tA==
   /rollup-plugin-hot-nollup/0.1.2_rollup@2.32.1:
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.32.1
@@ -2593,7 +2572,6 @@ specifiers:
   recursive-readdir: ^2.2.2
   rollup: ^2.3.4
   rollup-plugin-hot: ^0.1.0
-  rollup-plugin-hot-css: ^0.4.0
   rollup-plugin-livereload: ^2.0.0
   rollup-plugin-svelte-hot: ^0.10.0
   rollup-plugin-terser: ^7.0.0
