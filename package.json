@@ -26,7 +26,7 @@
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
-    "tailwind": "tailwindcss build public/pre-tailwind.css -o public/dist/tailwind.css",
+    "tailwind": "tailwindcss build tailwind.css -o public/dist/tailwind.css",
     "dev": "routify -c dev:nollup",
     "start": "sirv public --single"
   },
