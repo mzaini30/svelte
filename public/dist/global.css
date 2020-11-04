@@ -1,5 +1,7 @@
-[class^="ri-"], [class*=" ri-"] {
+[class^="ri-"], 
+[class*=" ri-"],
+[type='checkbox'] {
 	vertical-align: middle;
-	top: -2px;
+	top: -1px;
 	position: relative;
 }
