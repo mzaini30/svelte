@@ -38,7 +38,7 @@ npm run dev
 
 ## Tailwind CSS
 
-Settingnya ada di `tailwind.config.js`.
+Untuk style, kita menggunakan `tailwind.min.css`.
 
 ## Icon
 
