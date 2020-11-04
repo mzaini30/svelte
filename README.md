@@ -40,6 +40,8 @@ npm run dev
 
 Untuk generate Tailwind, bisa menggunakan perintah `npm run tailwind`.
 
+File Tailwindnya ada di `tailwind.pcss`. Nah, itu yang dimodif. Sedangkan settingnya ada di `tailwind.config.js`.
+
 ## Icon
 
 Menggunakan Remix Icon.
