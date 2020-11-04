@@ -101,7 +101,6 @@ export default {
         // Turn on to disable preservation of local component
         // state -- i.e. non exported `let` variables
         noPreserveState: false,
-
         // See docs of rollup-plugin-svelte-hot for all available options:
         //
         // https://github.com/rixo/rollup-plugin-svelte-hot#usage

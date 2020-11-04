@@ -36,9 +36,9 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## Style
+## Tailwind CSS
 
-Untuk style, kita menggunakan Tailwind dikarenakan fleksibilitasnya dalam membuat website.
+Untuk generate Tailwind, bisa menggunakan perintah `npm run tailwind`.
 
 ## Icon
 
