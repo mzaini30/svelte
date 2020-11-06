@@ -1,3 +1,6 @@
+* {
+	word-wrap: break-word;
+}
 [class^="ri-"], 
 [class*=" ri-"],
 [type='checkbox'] {
