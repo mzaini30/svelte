@@ -38,7 +38,9 @@ npm run dev
 
 ## Tailwind CSS
 
-Untuk style, kita menggunakan `tailwind.min.css`.
+Ada Tailwind di `public/dist/tailwind.css`.
+
+Untuk generate dari `tailwind.pcss`, menggunakan `npm run tailwind`.
 
 ## Icon
 
