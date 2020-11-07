@@ -36,11 +36,9 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## Tailwind CSS
+## CSS Framework
 
-Ada Tailwind di `public/dist/tailwind.css`.
-
-Untuk generate dari `tailwind.pcss`, menggunakan `npm run tailwind`.
+CSS framework yang digunakan di template ini adalah Bulma yang letaknya ada di `public/dist/`.
 
 ## Icon
 
