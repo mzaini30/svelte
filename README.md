@@ -36,10 +36,6 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## CSS Framework
-
-CSS framework yang digunakan di template ini adalah Bulma yang letaknya ada di `public/dist/`.
-
 ## Icon
 
 Menggunakan Remix Icon.
