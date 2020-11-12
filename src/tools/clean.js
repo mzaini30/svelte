@@ -1,3 +1,1 @@
-export const clean = x => {
-
-}
+export const clean = x => x.replace(/'/g, "\\'")
