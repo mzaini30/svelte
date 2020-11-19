@@ -6,10 +6,9 @@
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@sveltech/routify": "^1.9.9",
-    "fs-extra": "^9.0.1",
+    "autoprefixer": "^10.0.2",
     "nollup": "^0.13.13",
-    "purgecss": "^3.0.0",
-    "recursive-readdir": "^2.2.2",
+    "postcss": "^8.1.7",
     "rollup": "^2.3.4",
     "rollup-plugin-hot": "^0.1.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -19,18 +18,16 @@
     "tailwindcss": "^2.0.1"
   },
   "dependencies": {
-    "autoprefixer": "^10.0.2",
-    "postcss": "^8.1.7",
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
-    "build": "routify -b --dynamic-imports && rollup -c && node script/salin.js && node script/pakaiPurge.js",
+    "build": "NODE_ENV=production tailwindcss build tailwind.pcss -o public/dist/tailwind.css && routify -b --dynamic-imports && rollup -c",
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
     "dev": "routify -c dev:nollup",
     "start": "sirv public --single",
-    "tailwind": "tailwindcss build tailwind.pcss -o public/tailwind.css"
+    "tailwind": "tailwindcss build tailwind.pcss -o public/dist/tailwind.css"
   },
   "routify": {
     "extensions": "svelte,html,svx,md",

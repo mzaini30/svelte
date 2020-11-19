@@ -58,18 +58,18 @@ function serve() {
 export default {
   input: 'src/main.js',
   output: {
-    sourcemap: true,
+    sourcemap: false,
     name: 'app',
     // entryFileNames: 'main.js',
 
     // code splitting
     format: 'es',
-    dir: 'hasil', // ini diabaikan sama hmr
-		/* 
-		* kode untuk mengatasi error sbb:
-		* Error: UMD and IIFE output formats are not supported for code-splitting builds.
-		* Sumber: https://github.com/lukeed/navaid/issues/5
-		*/
+    dir: 'public', // ini diabaikan sama hmr
+    /* 
+    * kode untuk mengatasi error sbb:
+    * Error: UMD and IIFE output formats are not supported for code-splitting builds.
+    * Sumber: https://github.com/lukeed/navaid/issues/5
+    */
 
     // bukan code splitting
     // format: 'iife',
@@ -92,7 +92,7 @@ export default {
       // NOTE when hot option is enabled, this gets automatically be turned to
       // false because CSS extraction doesn't work with HMR currently
       css: css => {
-        css.write('hasil/build/bundle.css') // diabaikan pas hmr
+        css.write('public/bundle.css') // diabaikan pas hmr
       },
       hot: isHot && {
         // Optimistic will try to recover from runtime
