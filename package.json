@@ -6,7 +6,6 @@
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@sveltech/routify": "^1.9.9",
-    "@tailwindcss/typography": "^0.2.0",
     "fs-extra": "^9.0.1",
     "nollup": "^0.13.13",
     "purgecss": "^3.0.0",
@@ -17,9 +16,11 @@
     "rollup-plugin-svelte-hot": "^0.10.0",
     "rollup-plugin-terser": "^7.0.0",
     "svelte": "^3.0.0",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^2.0.1"
   },
   "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.7",
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
@@ -29,7 +30,7 @@
     "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
     "dev": "routify -c dev:nollup",
     "start": "sirv public --single",
-    "tailwind": "tailwindcss build tailwind.pcss -o public/dist/tailwind.css"
+    "tailwind": "tailwindcss build tailwind.pcss -o public/tailwind.css"
   },
   "routify": {
     "extensions": "svelte,html,svx,md",
