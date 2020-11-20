@@ -1,6 +1,6 @@
 .DS_Store
 .routify
 /node_modules/
-/public/
-!/public/dist/
-!/public/index.html
+/public/*.js
+/public/*.css
+/public/*.css.map
