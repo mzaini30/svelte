@@ -16,6 +16,10 @@ npm i
 
 # Fitur
 
+## CSS
+
+Menggunakan Bootstrap
+
 ## Code splitting
 
 Cukup jalankan 
@@ -36,29 +40,31 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## Icon
-
-Menggunakan Remix Icon.
-
 ## SEO
 
 Ini isi dari `public/index.html`:
 
 ```html
+<!-- 
+
+	Website ini dibuat oleh Zen
+	duniazen.com
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 
-	<title></title>
-	<meta name="description" content="">
-	<meta property="og:image" content="/dist/favicon.png">
-	<link rel='icon' type='image/png' href='/dist/favicon.png'>
+	<title>Svelte Template</title>
+	<meta name="description" content="Template Svelte yang diolah oleh Zen">
+	<meta property="og:image" content="/dist/jean.jpg">
+	<link rel='icon' type='image/png' href='/dist/ungu.png'>
 
-	<link rel='stylesheet' href='/dist/bootstrap.min.css'>
+	<link rel='stylesheet' href='/dist/bootstrap/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='/bundle.css'>
 	<link rel='stylesheet' href='/dist/global.css'>
-	<link rel='stylesheet' href='/build/bundle.css'>
 	<script defer src='/main.js' type="module"></script>
 </head>
 <body>
