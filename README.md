@@ -11,8 +11,8 @@ npm i
 | Keterangan | Folder |
 |---|---|
 | File Svelte | src/pages |
-| Static files | public |
-| Output | hasil |
+| Static files | public/dist |
+| Output | public |
 
 # Fitur
 
@@ -39,10 +39,6 @@ npm run dev
 ## Icon
 
 Menggunakan Remix Icon.
-
-## Purge CSS
-
-Saat mode production (build), rules css yang nggak digunakan akan terhapus dengan sendirinya sehingga menghemat ukuran file css. Untuk settingnya, bisa dibuka `script/pakaiPurge.js`.
 
 ## SEO
 
