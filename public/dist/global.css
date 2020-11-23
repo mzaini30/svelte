@@ -1,0 +1,18 @@
+* {
+	word-wrap: break-word;
+}
+[class^="ri-"], 
+[class*=" ri-"],
+[type='checkbox'] {
+	vertical-align: middle;
+	top: -1px;
+	position: relative;
+}
+.h-screen {
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+}
+.min-h-screen {
+	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
+}
