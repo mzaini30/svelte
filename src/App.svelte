@@ -2,7 +2,7 @@
   import { Router } from "@roxi/routify";
   import { routes } from "../.routify/routes";
   import {isLoading} from '@/store'
-  import Loading from '@/tools/Loading.svelte'
+  import Loading from '@/Loading.svelte'
   let vh = 0
   const tinggiFull = () => {
   	vh = window.innerHeight * 0.01

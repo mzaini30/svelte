@@ -108,7 +108,7 @@ Caranya:
 
 ```html
 <script>
-	import {tanggal} from '@/tools/tanggal'
+	import {tanggal} from '@/tools'
 </script>
 <p>{tanggal()}</p>
 ```
@@ -121,7 +121,7 @@ Caranya:
 
 ```html
 <script>
-	import {slug} from '@/tools/slug'
+	import {slug} from '@/tools'
 </script>
 <p>{slug('hello world')}</p>
 <!-- jadinya: hello-world -->
@@ -134,23 +134,9 @@ Digunakan untuk mengacak array
 Caranya:
 
 ```javascript
-import {acak} from "@/tools/acak"
+import {acak} from "@/tools"
 let angka = [1, 2, 3, 4, 5]
 angka = acak(angka)
-```
-
-## Datatable (on progress)
-
-```html
-<script type="text/javascript">
-	import Datatable from '@/tools/Datatable.svelte'
-	let data = [
-		{nama: 'Zen', alamat: 'Samarinda', kelas: 2},
-		{nama: 'Yani', alamat: 'Balikpapan', kelas: 1},
-		{nama: 'Maryam', alamat: 'Tenggarong', kelas: 3}
-	]
-</script>
-<Datatable {data}/>
 ```
 
 # Terjemahan?
