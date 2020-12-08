@@ -4,3 +4,5 @@
 /public/*.js
 /public/*.css
 /public/*.css.map
+
+.vercel
