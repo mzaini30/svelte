@@ -24,7 +24,7 @@ export function atas(){
   })
 }
 export function clean(x){
-  return x.replace(/'/g, "\\'")
+  return x.replace(/'/g, "\\'").replace(/"/g, '\\"')
 }
 export function slug (str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
