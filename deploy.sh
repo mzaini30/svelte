@@ -1,8 +1,3 @@
-git status
-git add -A .
-git commit -m "oke"
-git push
-
 rm public/*.js
 
 npm run build
