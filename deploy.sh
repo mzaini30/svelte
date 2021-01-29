@@ -1,5 +1,3 @@
-rm public/*.js
-
 npm run build
 
 cp public/index.html public/200.html
