@@ -18,7 +18,7 @@
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
-    "build": "rm public/*.js && routify -b --dynamic-imports && rollup -c",
+    "build": "routify -b --dynamic-imports && rollup -c",
     "dev:rollup": "rollup -c -w",
     "dev:livereload": "rollup -c -w --environment LIVERELOAD",
     "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
