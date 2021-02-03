@@ -1,144 +1,78 @@
-# Instalasi
+# Svelte
+
+## Instalasi
 
 ```bash
-npx degit mzaini30/svelte my-project
-cd my-project
-npm i
+npx degit mzaini30/svelte hello-world
+cd hello-world
+npm i --prefer-offline
 ```
 
-# Struktur folder
+## Mode Dev
 
-| Keterangan | Folder |
-|---|---|
-| File Svelte | src/pages |
-| Static files | public/dist |
-| Output | public |
-
-# Fitur
-
-## CSS
-
-Menggunakan Bootstrap
-
-## Code splitting
-
-Cukup jalankan 
-
-```bash
-npm run build
-```
-
-## Router berbasis file
-
-Kita menggunakan Routify.
-
-## Hot module reload
-
-Dia nggak mereset state saat kita development. Cukup jalankan:
+Menggunakan Snowpack
 
 ```bash
 npm run dev
 ```
 
-## SEO
+## Build
 
-Ini isi dari `public/index.html`:
-
-```html
-<!-- 
-
-	Website ini dibuat oleh Zen
-	duniazen.com
-
--->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
-
-	<title>Svelte Template</title>
-	<meta name="description" content="Template Svelte yang diolah oleh Zen">
-	<meta property="og:image" content="/dist/jean.jpg">
-	<link rel='icon' type='image/png' href='/dist/ungu.png'>
-
-	<link rel='stylesheet' href='/dist/bootstrap/css/bootstrap.min.css'>
-	<link rel='stylesheet' href='/bundle.css'>
-	<link rel='stylesheet' href='/dist/global.css'>
-	<script defer src='/main.js' type="module"></script>
-</head>
-<body>
-</body>
-</html>
+```bash
+npm run build
 ```
 
-Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
+Hasilnya di folder `build`
 
-## Loader
+## Sudah Ada Bootstrap
 
-Cara menggunakan:
+Letaknya di `src/pages/_layout.svelte`
+
+## Menggunakan Routify
+
+Semua halaman ada di `src/pages`
+
+| File | Route |
+|---|---|
+| `index.svelte` | `situs.com` |
+| `hello.svelte` | `situs.com/hello` |
+| `[slug].svelte` | `situs.com/judulnya` |
+
+## Tools Siap Pakai
 
 ```javascript
-import {isLoading} from '@/store'
-$isLoading = true // untuk mengaktifkan loader
-$isLoading = false // untuk mematikan loader
+const tools = require('tools')
+console.log()
+
+// acak
+const angka = [...Array(10).keys()]
+const acak = tools.acak(angka)
+console.log('Angka diacak:')
+console.log(acak)
+console.log()
+
+// slug
+const judul = 'Aku mau makan nasi. Kamu mau ikut kah?'
+console.log(`Judul: ${judul}`)
+console.log(`Slug: ${tools.slug(judul)}`)
+console.log()
+
+// tanggal
+console.log(`Tanggal sekarang: ${tools.tanggal()}`)
+
+console.log()
 ```
 
-Itu harus diletakkan di dalam folder `halaman`.
-
-## Absolute path
-
-Contoh:
+## Embed Youtube
 
 ```javascript
-import {nama} from '@/data/nama'
+const yt = require("embed-youtube")
+const teks = `
+Ini videonya:
+
+{{ youtube ygH68h }}
+
+Bagus kan?
+`
+console.log(yt(teks))
 ```
-
-Tapi, bisa juga relative path seperti:
-
-```javascript
-import {nama} from '../../../nama'
-```
-
-## Tanggal
-
-Mendapatkan tanggal terkini dengan format 2020-08-17 00:19:45
-
-Caranya:
-
-```html
-<script>
-	import {tanggal} from '@/tools'
-</script>
-<p>{tanggal()}</p>
-```
-
-## Slug
-
-Mendapatkan slug dari string
-
-Caranya:
-
-```html
-<script>
-	import {slug} from '@/tools'
-</script>
-<p>{slug('hello world')}</p>
-<!-- jadinya: hello-world -->
-```
-
-## Acak
-
-Digunakan untuk mengacak array
-
-Caranya:
-
-```javascript
-import {acak} from "@/tools"
-let angka = [1, 2, 3, 4, 5]
-angka = acak(angka)
-```
-
-# Terjemahan?
-
-Boleh. Misalnya aja mau nerjemahkan ke bahasa Jepang, maka buat file `README-jp.md` yang berisi terjemahan README ini dalam bahasa Jepang.

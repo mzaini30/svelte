@@ -1,6 +1,4 @@
-.DS_Store
-.routify
-/node_modules/
-/public/*.js
-/public/*.css
-/public/*.css.map
+.snowpack
+build
+node_modules
+src/.routify
