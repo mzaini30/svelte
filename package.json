@@ -1,29 +1,33 @@
 {
-  "scripts": {
-    "dev": "routify -c snowpack-start",
-    "build-lawas": "routify -b && snowpack build",
-    "snowpack-start": "snowpack dev",
-    "build": "routify -b && rollup -c",
-    "test": "echo \"This template does not include a test runner by default.\" && exit 1"
-  },
+  "name": "svelte-app",
+  "version": "1.0.0",
   "devDependencies": {
-    "snowpack": "^3.0.1"
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@roxi/routify": "^2.7.3",
+    "nollup": "^0.13.13",
+    "rollup": "^2.3.4",
+    "rollup-plugin-hot": "^0.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte-hot": "^0.10.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
   },
   "dependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.1.0",
-    "@roxi/routify": "^2.7.3",
-    "@snowpack/plugin-svelte": "^3.5.2",
-    "embed-youtube": "github:mzaini30/embed-youtube",
-    "rollup-plugin-hot": "^0.1.1",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte-hot": "^0.13.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "svelte": "^3.32.1",
-    "tools": "github:mzaini30/tools"
+    "sirv-cli": "^1.0.0"
+  },
+  "scripts": {
+    "build": "routify -b --dynamic-imports && rollup -c",
+    "dev:rollup": "rollup -c -w",
+    "dev:livereload": "rollup -c -w --environment LIVERELOAD",
+    "dev:nollup": "nollup -c --hot --history-api-fallback --port 5000 --content-base ./public",
+    "dev": "routify -c dev:nollup",
+    "start": "sirv public --single"
   },
   "routify": {
-    "routifyDir": "src/.routify",
-    "dynamicImports": false
+    "extensions": "svelte,html,svx,md",
+    "dynamicImports": true,
+    "routifyDir": ".routify"
   }
 }

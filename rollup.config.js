@@ -4,6 +4,8 @@ import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import hmr from 'rollup-plugin-hot'
+import alias from '@rollup/plugin-alias';
+import path from 'path';
 
 // Set this to true to pass the --single flag to sirv (this serves your
 // index.html for any unmatched route, which is a requirement for SPA
@@ -13,7 +15,7 @@ import hmr from 'rollup-plugin-hot'
 // have to add the --history-api-fallback yourself in your package.json
 // scripts (see: https://github.com/PepsRyuu/nollup/#nollup-options)
 //
-const spa = false
+const spa = true
 
 // NOTE The NOLLUP env variable is picked by various HMR plugins to switch
 // in compat mode. You should not change its name (and set the env variable
@@ -54,15 +56,15 @@ function serve() {
 }
 
 export default {
-  input: 'src/index.js',
+  input: 'src/main.js',
   output: {
     sourcemap: false,
     name: 'app',
     // entryFileNames: 'main.js',
 
     // code splitting
-    // format: 'es',
-    // dir: 'public', // ini diabaikan sama hmr
+    format: 'es',
+    dir: 'public', // ini diabaikan sama hmr
     /* 
     * kode untuk mengatasi error sbb:
     * Error: UMD and IIFE output formats are not supported for code-splitting builds.
@@ -70,10 +72,18 @@ export default {
     */
 
     // bukan code splitting
-    format: 'iife',
-    file: 'public/dist/index.js',
+    // format: 'iife',
+    // file: 'public/build/main.js',
   },
   plugins: [
+    alias({
+      entries: [
+        {
+          find: "@",
+          replacement: path.resolve(__dirname, "src/")
+        }
+      ]
+    }),
     svelte({
       // enable run-time checks when not in production
       dev: !isProduction,
@@ -82,7 +92,7 @@ export default {
       // NOTE when hot option is enabled, this gets automatically be turned to
       // false because CSS extraction doesn't work with HMR currently
       css: css => {
-        css.write('bundle.css') // diabaikan pas hmr
+        css.write('public/bundle.css') // diabaikan pas hmr
       },
       hot: isHot && {
         // Optimistic will try to recover from runtime
