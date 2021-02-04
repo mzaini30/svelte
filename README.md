@@ -22,7 +22,7 @@ npm run dev
 npm run build
 ```
 
-Hasilnya di folder `build`
+Hasilnya di folder `public`
 
 ## Sudah Ada Bootstrap
 

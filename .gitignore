@@ -2,3 +2,5 @@
 build
 node_modules
 src/.routify
+public/dist/bundle.css
+public/dist/index.js
