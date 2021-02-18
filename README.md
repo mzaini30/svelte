@@ -20,6 +20,40 @@ npm i
 
 Menggunakan Bootstrap
 
+## Bisa Menggunakan SASS
+
+Contoh:
+
+```html
+<div class="container pt-3">
+	<h1>Hello World</h1>
+</div>
+
+<style type="text/scss">
+	$warna: red;
+	$ukuran: 100px;
+	h1 {
+		color: $warna;
+		font-size: $ukuran;
+	}
+</style>
+```
+
+## Bisa Juga Dibuat Global Stylenya
+
+Contoh:
+
+```html
+<style type="text/scss" global>
+	p {
+		color: green;
+		strong {
+			text-transform: uppercase;
+		}
+	}
+</style>
+```
+
 ## Code splitting
 
 Cukup jalankan 

@@ -1,4 +1,5 @@
 import svelte from 'rollup-plugin-svelte-hot'
+import sveltePreprocess from 'svelte-preprocess'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
@@ -85,6 +86,7 @@ export default {
       ]
     }),
     svelte({
+      preprocess: sveltePreprocess(),
       // enable run-time checks when not in production
       dev: !isProduction,
       // we'll extract any component CSS out into
