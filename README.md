@@ -165,6 +165,37 @@ let angka = [1, 2, 3, 4, 5]
 angka = acak(angka)
 ```
 
+## Atas
+
+Scroll ke atas.
+
+```javascript
+import {atas} from 'tools'
+atas()
+```
+
+## Clean
+
+Membersihkan state dari kutip sehingga tidak merusak database dengan SQL Injection.
+
+```javascript
+import {clean} from 'tools'
+clean('Aku mau "makan')
+```
+
+## Sleep
+
+Memberi jeda dalam milidetik.
+
+```javascript
+import {sleep} from 'tools'
+(async function(){
+	console.log('Hello')
+	await sleep(5000) // sleep 5 detik
+	console.log('World')
+})()
+```
+
 # Terjemahan?
 
 Boleh. Misalnya aja mau nerjemahkan ke bahasa Jepang, maka buat file `README-jp.md` yang berisi terjemahan README ini dalam bahasa Jepang.
