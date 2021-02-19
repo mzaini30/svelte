@@ -56,6 +56,29 @@ Contoh:
 </style>
 ```
 
+## Bisa Menggabungkan Global Style dan Scoped
+
+Contoh: 
+
+```html
+<style type="text/scss">
+	:global {
+		p {
+			color: green;
+			strong {
+				text-transform: uppercase;
+			}
+		}
+		a {
+			color: red;
+		}
+	}
+	h1 {
+		text-align: center;
+	}
+</style>
+```
+
 ## Code Splitting
 
 Cukup jalankan 
