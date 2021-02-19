@@ -6,7 +6,7 @@ cd my-project
 npm i --prefer-offline
 ```
 
-# Struktur folder
+# Struktur Folder
 
 | Keterangan | Folder |
 |---|---|
@@ -56,7 +56,7 @@ Contoh:
 </style>
 ```
 
-## Code splitting
+## Code Splitting
 
 Cukup jalankan 
 
@@ -64,11 +64,11 @@ Cukup jalankan
 npm run build
 ```
 
-## Router berbasis file
+## Router Berbasis File
 
 Kita menggunakan Routify. Ini tutorialnya: https://routify.dev/guide/introduction/getting-started
 
-## Hot module reload
+## Hot Module Replacement
 
 Dia nggak mereset state saat kita development. Cukup jalankan:
 
@@ -112,7 +112,7 @@ Ini isi dari `public/index.html`:
 
 Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
 
-## Absolute path
+## Absolute Path
 
 Contoh:
 
