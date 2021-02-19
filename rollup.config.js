@@ -93,9 +93,9 @@ export default {
       // a separate file - better for performance
       // NOTE when hot option is enabled, this gets automatically be turned to
       // false because CSS extraction doesn't work with HMR currently
-      css: css => {
-        css.write('public/bundle.css') // diabaikan pas hmr
-      },
+      // css: css => {
+      //   css.write('public/bundle.css') // diabaikan pas hmr
+      // },
       hot: isHot && {
         // Optimistic will try to recover from runtime
         // errors during component init

@@ -101,7 +101,6 @@ Ini isi dari `public/index.html`:
 	<meta name="twitter:description" content="Template Svelte yang diolah oleh Zen">
 	<meta name="twitter:image" content="https://mzaini30.js.org/dist/jean.jpg">
 
-	<link rel='stylesheet' href='/bundle.css'>
 	<script defer src='/main.js' type="module"></script>
 </head>
 <body>
