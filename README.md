@@ -3,7 +3,7 @@
 ```bash
 npx degit mzaini30/svelte my-project
 cd my-project
-npm i
+npm i --prefer-offline
 ```
 
 # Struktur folder
@@ -13,6 +13,8 @@ npm i
 | File Svelte | src/pages |
 | Static files | public/dist |
 | Output | public |
+
+Hindari meletakkan file berekstensi .js, .css, dan .css.map di public. Letakkan di public/dist. Soalnya, ekstensi-ekstensi tersebut masuk di .gitignore.
 
 # Fitur
 
@@ -64,7 +66,7 @@ npm run build
 
 ## Router berbasis file
 
-Kita menggunakan Routify.
+Kita menggunakan Routify. Ini tutorialnya: https://routify.dev/guide/introduction/getting-started
 
 ## Hot module reload
 
@@ -79,46 +81,36 @@ npm run dev
 Ini isi dari `public/index.html`:
 
 ```html
-<!-- 
-
-	Website ini dibuat oleh Zen
-	duniazen.com
-
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<link rel='stylesheet' href='/dist/bootstrap.min.css'>
+	<link rel='stylesheet' href='/dist/global.css'>
 
 	<title>Svelte Template</title>
 	<meta name="description" content="Template Svelte yang diolah oleh Zen">
 	<meta property="og:image" content="/dist/jean.jpg">
 	<link rel='icon' type='image/png' href='/dist/ungu.png'>
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@blogodop">
+	<meta name="twitter:creator" content="@blogodop">
+	<meta name="twitter:title" content="Svelte Template">
+	<meta name="twitter:description" content="Template Svelte yang diolah oleh Zen">
+	<meta name="twitter:image" content="https://mzaini30.js.org/dist/jean.jpg">
 
-	<link rel='stylesheet' href='/dist/bootstrap/css/bootstrap.min.css'>
 	<link rel='stylesheet' href='/bundle.css'>
-	<link rel='stylesheet' href='/dist/global.css'>
 	<script defer src='/main.js' type="module"></script>
 </head>
 <body>
 </body>
 </html>
+
 ```
 
 Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
-
-## Loader
-
-Cara menggunakan:
-
-```javascript
-import {isLoading} from '@/store'
-$isLoading = true // untuk mengaktifkan loader
-$isLoading = false // untuk mematikan loader
-```
-
-Itu harus diletakkan di dalam folder `halaman`.
 
 ## Absolute path
 
@@ -142,7 +134,7 @@ Caranya:
 
 ```html
 <script>
-	import {tanggal} from '@/tools'
+	import {tanggal} from 'tools'
 </script>
 <p>{tanggal()}</p>
 ```
@@ -155,7 +147,7 @@ Caranya:
 
 ```html
 <script>
-	import {slug} from '@/tools'
+	import {slug} from 'tools'
 </script>
 <p>{slug('hello world')}</p>
 <!-- jadinya: hello-world -->
@@ -168,7 +160,7 @@ Digunakan untuk mengacak array
 Caranya:
 
 ```javascript
-import {acak} from "@/tools"
+import {acak} from "tools"
 let angka = [1, 2, 3, 4, 5]
 angka = acak(angka)
 ```
