@@ -1,4 +1,4 @@
-# Instalasi
+## Instalasi
 
 ```bash
 npx degit mzaini30/svelte my-project
@@ -6,7 +6,7 @@ cd my-project
 npm i --prefer-offline
 ```
 
-# Struktur Folder
+## Struktur Folder
 
 | Keterangan | Folder |
 |---|---|
@@ -16,15 +16,15 @@ npm i --prefer-offline
 
 Hindari meletakkan file berekstensi .js, .css, dan .css.map di public. Letakkan di public/dist. Soalnya, ekstensi-ekstensi tersebut masuk di .gitignore.
 
-# Fitur
+## Fitur
 
-## CSS
+### CSS
 
 Menggunakan Bootstrap.
 
 Untuk menonaktifkannya, hapus aja Bootstrapnya di `src/App.svelte`.
 
-## Bisa Menggunakan SASS
+### Bisa Menggunakan SASS
 
 Tutorial SASS di Web Programming Unpas: https://youtube.com/playlist?list=PLFIM0718LjIUqemgG97MAOK0J_berlQM5
 
@@ -45,7 +45,7 @@ Contoh:
 </style>
 ```
 
-## Bisa Juga Dibuat Global Stylenya
+### Bisa Juga Dibuat Global Stylenya
 
 Contoh:
 
@@ -60,7 +60,7 @@ Contoh:
 </style>
 ```
 
-## Bisa Menggabungkan Global Style dan Scoped
+### Bisa Menggabungkan Global Style dan Scoped
 
 Contoh: 
 
@@ -83,7 +83,7 @@ Contoh:
 </style>
 ```
 
-## Code Splitting
+### Code Splitting
 
 Cukup jalankan 
 
@@ -91,11 +91,11 @@ Cukup jalankan
 npm run build
 ```
 
-## Router Berbasis File
+### Router Berbasis File
 
 Kita menggunakan Routify. Ini tutorialnya: https://routify.dev/guide/introduction/getting-started
 
-## Hot Module Replacement
+### Hot Module Replacement
 
 Dia nggak mereset state saat kita development. Cukup jalankan:
 
@@ -103,7 +103,7 @@ Dia nggak mereset state saat kita development. Cukup jalankan:
 npm run dev
 ```
 
-## SEO
+### SEO
 
 Ini isi dari `public/index.html`:
 
@@ -137,7 +137,7 @@ Ini isi dari `public/index.html`:
 
 Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
 
-## Absolute Path
+### Absolute Path
 
 Contoh:
 
@@ -151,7 +151,7 @@ Tapi, bisa juga relative path seperti:
 import {nama} from '../../../nama'
 ```
 
-## Tanggal
+### Tanggal
 
 Mendapatkan tanggal terkini dengan format 2020-08-17 00:19:45
 
@@ -164,7 +164,7 @@ Caranya:
 <p>{tanggal()}</p>
 ```
 
-## Slug
+### Slug
 
 Mendapatkan slug dari string
 
@@ -178,7 +178,7 @@ Caranya:
 <!-- jadinya: hello-world -->
 ```
 
-## Acak
+### Acak
 
 Digunakan untuk mengacak array
 
@@ -190,7 +190,7 @@ let angka = [1, 2, 3, 4, 5]
 angka = acak(angka)
 ```
 
-## Atas
+### Atas
 
 Scroll ke atas.
 
@@ -199,7 +199,7 @@ import {atas} from 'tools'
 atas()
 ```
 
-## Clean
+### Clean
 
 Membersihkan state dari kutip sehingga tidak merusak database dengan SQL Injection.
 
@@ -208,7 +208,7 @@ import {clean} from 'tools'
 clean('Aku mau "makan')
 ```
 
-## Sleep
+### Sleep
 
 Memberi jeda dalam milidetik.
 
@@ -221,6 +221,6 @@ import {sleep} from 'tools'
 })()
 ```
 
-# Terjemahan?
+## Terjemahan?
 
 Boleh. Misalnya aja mau nerjemahkan ke bahasa Jepang, maka buat file `README-jp.md` yang berisi terjemahan README ini dalam bahasa Jepang.
