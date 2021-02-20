@@ -26,7 +26,7 @@ Untuk menonaktifkannya, hapus aja Bootstrapnya di `src/App.svelte`.
 
 ## Bisa Menggunakan SASS
 
-Tutorial SASS: https://youtube.com/playlist?list=PLFIM0718LjIUqemgG97MAOK0J_berlQM5
+Tutorial SASS di Web Programming Unpas: https://youtube.com/playlist?list=PLFIM0718LjIUqemgG97MAOK0J_berlQM5
 
 Contoh:
 
