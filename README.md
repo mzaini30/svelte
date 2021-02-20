@@ -20,9 +20,13 @@ Hindari meletakkan file berekstensi .js, .css, dan .css.map di public. Letakkan 
 
 ## CSS
 
-Menggunakan Bootstrap
+Menggunakan Bootstrap.
+
+Untuk menonaktifkannya, hapus aja Bootstrapnya di `src/App.svelte`.
 
 ## Bisa Menggunakan SASS
+
+Tutorial SASS: https://youtube.com/playlist?list=PLFIM0718LjIUqemgG97MAOK0J_berlQM5
 
 Contoh:
 
