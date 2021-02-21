@@ -15,11 +15,11 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@mzaini30/tools": "^2.0.0",
     "postcss": "^8.2.6",
     "sass": "^1.32.7",
     "sirv-cli": "^1.0.0",
-    "svelte-preprocess": "^4.6.8",
-    "tools": "github:mzaini30/tools"
+    "svelte-preprocess": "^4.6.8"
   },
   "scripts": {
     "build": "routify -b --dynamic-imports && rollup -c",

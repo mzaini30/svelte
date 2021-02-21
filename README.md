@@ -157,7 +157,7 @@ import {nama} from '../../../nama'
 
 ### Berbagai Tools Siap Pakai
 
-Untuk detailnya, kunjungi https://github.com/mzaini30/tools
+Untuk detailnya, kunjungi https://www.npmjs.com/package/@mzaini30/tools
 
 ## Terjemahan?
 
