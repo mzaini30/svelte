@@ -5,9 +5,8 @@ Oh iya, buat yang belum paham cara pakai Svelte, kunjungi dulu tutorialnya ya di
 ## Instalasi
 
 ```bash
-npx degit mzaini30/svelte my-project
-cd my-project
-npm i --prefer-offline
+npm init @mzaini30/svelte
+npm i
 ```
 
 ## Struktur Folder
