@@ -15,7 +15,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "kumpulan-tools": "^2.0.0",
+    "kumpulan-tools": "^1.0.0",
     "postcss": "^8.2.6",
     "sass": "^1.32.7",
     "sirv-cli": "^1.0.0",
