@@ -5,7 +5,7 @@ Oh iya, buat yang belum paham cara pakai Svelte, kunjungi dulu tutorialnya ya di
 ## Instalasi
 
 ```bash
-npm init @mzaini30/svelte
+npm init svelte-zen
 npm i
 ```
 
@@ -156,7 +156,7 @@ import {nama} from '../../../nama'
 
 ### Berbagai Tools Siap Pakai
 
-Untuk detailnya, kunjungi https://www.npmjs.com/package/@mzaini30/tools
+Untuk detailnya, kunjungi https://www.npmjs.com/package/kumpulan-tools
 
 ## Terjemahan?
 
