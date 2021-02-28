@@ -90,41 +90,27 @@ Contoh:
 
 Contoh:
 
-`_hello.md`
+`index.md`
 
 ```markdown
-# Hello World
+<div class="container my-3">
+	# Hello {nama}
 
-Ini adalah paragraf
-```
-
-`index.svelte`
-
-```html
-<script type="text/javascript">
-	import Hello from './_hello.md'
-</script>
-
-<div class="container index my-3">
-	<Hello/>
+	Ini di mana ya?
 </div>
 
-<style type="text/scss">
-	.index {
-		:global {
-			h1 {
-				color: blue;
-			}
-			p {
-				color: maroon;
-			}
+<script type="text/javascript">
+	const nama = 'Zen'
+</script>
+
+<style type="text/css" lang="scss">
+	.container {
+		color: green;
+		h1 {
+			color: red;
 		}
 	}
 </style>
-
-<svelte:head>
-	<title>Beranda</title>
-</svelte:head>
 ```
 
 ### Code Splitting

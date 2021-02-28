@@ -16,11 +16,11 @@
   },
   "dependencies": {
     "kumpulan-tools": "^1.0.0",
-    "mdsvex": "^0.8.9",
     "postcss": "^8.2.6",
     "sass": "^1.32.7",
     "sirv-cli": "^1.0.0",
-    "svelte-preprocess": "^4.6.8"
+    "svelte-preprocess": "^4.6.8",
+    "svelte-preprocess-markdown": "^2.7.3"
   },
   "scripts": {
     "build": "routify -b && rollup -c",
