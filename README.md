@@ -86,6 +86,47 @@ Contoh:
 </style>
 ```
 
+### Bisa Menggunakan Markdown
+
+Contoh:
+
+`_hello.md`
+
+```markdown
+# Hello World
+
+Ini adalah paragraf
+```
+
+`index.svelte`
+
+```html
+<script type="text/javascript">
+	import Hello from './_hello.md'
+</script>
+
+<div class="container index my-3">
+	<Hello/>
+</div>
+
+<style type="text/scss">
+	.index {
+		:global {
+			h1 {
+				color: blue;
+			}
+			p {
+				color: maroon;
+			}
+		}
+	}
+</style>
+
+<svelte:head>
+	<title>Beranda</title>
+</svelte:head>
+```
+
 ### Code Splitting
 
 Cukup jalankan 

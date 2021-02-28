@@ -7,6 +7,7 @@ import { terser } from 'rollup-plugin-terser'
 import hmr from 'rollup-plugin-hot'
 import alias from '@rollup/plugin-alias';
 import path from 'path';
+import {mdsvex} from 'mdsvex'
 
 // Set this to true to pass the --single flag to sirv (this serves your
 // index.html for any unmatched route, which is a requirement for SPA
@@ -86,7 +87,16 @@ export default {
       ]
     }),
     svelte({
-      preprocess: sveltePreprocess(),
+      preprocess: [
+        sveltePreprocess(),
+        mdsvex({
+          extension: 'md'
+        })
+      ],
+      extensions: [
+        '.svelte',
+        '.md'
+      ],
       // enable run-time checks when not in production
       dev: !isProduction,
       // we'll extract any component CSS out into

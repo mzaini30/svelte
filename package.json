@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "kumpulan-tools": "^1.0.0",
+    "mdsvex": "^0.8.9",
     "postcss": "^8.2.6",
     "sass": "^1.32.7",
     "sirv-cli": "^1.0.0",
