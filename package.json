@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "svelte-template-from-zen",
   "version": "1.0.0",
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.1",
