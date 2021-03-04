@@ -14,10 +14,7 @@ npm i
 | Keterangan | Folder |
 |---|---|
 | File Svelte | src/pages |
-| Static files | public/dist |
 | Output | public |
-
-Hindari meletakkan file berekstensi .js, .css, dan .css.map di public. Letakkan di public/dist. Soalnya, ekstensi-ekstensi tersebut masuk di .gitignore.
 
 ## Fitur
 
