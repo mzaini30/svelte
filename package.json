@@ -15,7 +15,6 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "fsevents": "^2.3.2",
     "kumpulan-tools": "^1.0.0",
     "postcss": "^8.2.6",
     "sass": "^1.32.7",
