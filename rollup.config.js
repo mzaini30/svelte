@@ -87,14 +87,8 @@ export default {
       ]
     }),
     svelte({
-      preprocess: [
-        sveltePreprocess(),
-        // markdown()
-      ],
-      extensions: [
-        '.svelte',
-        // '.md'
-      ],
+      preprocess: sveltePreprocess(),
+      extensions: ['.svelte'],
       // enable run-time checks when not in production
       dev: !isProduction,
       // we'll extract any component CSS out into
