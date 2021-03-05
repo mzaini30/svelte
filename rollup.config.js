@@ -7,7 +7,7 @@ import { terser } from 'rollup-plugin-terser'
 import hmr from 'rollup-plugin-hot'
 import alias from '@rollup/plugin-alias';
 import path from 'path';
-const {markdown} = require('svelte-preprocess-markdown');
+// const {markdown} = require('svelte-preprocess-markdown');
 
 // Set this to true to pass the --single flag to sirv (this serves your
 // index.html for any unmatched route, which is a requirement for SPA
@@ -89,11 +89,11 @@ export default {
     svelte({
       preprocess: [
         sveltePreprocess(),
-        markdown()
+        // markdown()
       ],
       extensions: [
         '.svelte',
-        '.md'
+        // '.md'
       ],
       // enable run-time checks when not in production
       dev: !isProduction,
