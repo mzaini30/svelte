@@ -1,7 +1,5 @@
 # Template Svelte Olahanku
 
-> Masih error
-
 Oh iya, buat yang belum paham cara pakai Svelte, kunjungi dulu tutorialnya ya di https://svelte.dev/tutorial/basics
 
 ## Instalasi
