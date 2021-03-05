@@ -83,33 +83,6 @@ Contoh:
 </style>
 ```
 
-### Bisa Menggunakan Markdown
-
-Contoh:
-
-`index.md`
-
-```markdown
-<div class="container my-3">
-	# Hello {nama}
-
-	Ini di mana ya?
-</div>
-
-<script type="text/javascript">
-	const nama = 'Zen'
-</script>
-
-<style type="text/css" lang="scss">
-	.container {
-		color: green;
-		h1 {
-			color: red;
-		}
-	}
-</style>
-```
-
 ### Code Splitting
 
 Cukup jalankan 
