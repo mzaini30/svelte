@@ -155,6 +155,10 @@ import {nama} from '../../../nama'
 
 Untuk detailnya, kunjungi https://www.npmjs.com/package/kumpulan-tools
 
+### Bisa Notifikasi
+
+Cara pakainya: https://saitama.my.id/menambahkan-notifikasi-di-svelte
+
 ## Terjemahan?
 
 Boleh. Misalnya aja mau nerjemahkan ke bahasa Jepang, maka buat file `README-jp.md` yang berisi terjemahan README ini dalam bahasa Jepang.

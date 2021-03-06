@@ -1,6 +1,7 @@
 <script>
 	import { Router } from "@roxi/routify";
 	import { routes } from "../.routify/routes";
+	import Notifications from "svelte-notifications"
 	let vh = 0
 	const tinggiFull = () => {
 		vh = window.innerHeight * 0.01
@@ -10,7 +11,9 @@
 	window.addEventListener("resize", tinggiFull)
 </script>
 
-<Router {routes}/>
+<Notifications>
+	<Router {routes}/>
+</Notifications>
 
 <svelte:head>
 	<link rel='stylesheet' href='/dist/bootstrap.min.css'>
@@ -32,6 +35,10 @@
 		img {
 			max-width: 100%;
 			height: auto;
+		}
+		.notifications {
+			z-index: 100000000000000;
+			position: relative;
 		}
 	}
 </style>

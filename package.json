@@ -6,20 +6,21 @@
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@roxi/routify": "^2.7.3",
+    "kumpulan-tools": "^1.0.0",
     "nollup": "^0.13.13",
+    "postcss": "^8.2.7",
     "rollup": "^2.3.4",
     "rollup-plugin-hot": "^0.1.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte-hot": "^0.10.0",
     "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0"
+    "sass": "^1.32.8",
+    "svelte": "^3.0.0",
+    "svelte-notifications": "^0.9.9",
+    "svelte-preprocess": "^4.6.9"
   },
   "dependencies": {
-    "kumpulan-tools": "^1.0.0",
-    "postcss": "^8.2.6",
-    "sass": "^1.32.7",
-    "sirv-cli": "^1.0.0",
-    "svelte-preprocess": "^4.6.8"
+    "sirv-cli": "^1.0.0"
   },
   "scripts": {
     "build": "routify -b && rollup -c",
