@@ -13,12 +13,85 @@ npm i
 
 | Keterangan | Folder |
 |---|---|
-| File Svelte | src/pages |
-| Output | public |
+| Routes | src/pages/ |
+| Output | public/ |
+| Output SSG | ssg/ |
 
-## Fitur
+## Routing (Berbasis File dari Routify)
 
-### CSS
+Kita menggunakan Routify. Ini tutorialnya: https://routify.dev/guide/introduction/getting-started
+
+## Development dan Build
+
+### Development (Menggunakan HMR Nollup)
+
+Dia nggak mereset state saat kita development. Cukup jalankan:
+
+```bash
+npm run dev
+```
+
+### Build (Code Splitting)
+
+Cukup jalankan 
+
+```bash
+npm run build
+```
+
+### Generate ke SSG
+
+Jalankan perintah:
+
+```bash
+sh static.sh
+```
+
+Hasilnya ada di ssg/
+
+### Upload ke Surge
+
+Pastikan sudah login surge di laptop. Kemudian, pastikan sudah membuat file CNAME di public/. Contoh isinya: `https://makanan.surge.sh`. Kemudian, untuk deploy hingga uploadnya, jalankan perintah:
+
+```bash
+sh surge.sh
+```
+
+## Kerangka (index.html)
+
+Ini isi dari `public/index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte Template</title>
+	<meta name="description" content="Template Svelte yang diolah oleh Zen">
+	<meta property="og:image" content="/dist/jean.jpg">
+	<link rel='icon' type='image/png' href='/dist/ungu.png'>
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@blogodop">
+	<meta name="twitter:creator" content="@blogodop">
+	<meta name="twitter:title" content="Svelte Template">
+	<meta name="twitter:description" content="Template Svelte yang diolah oleh Zen">
+	<meta name="twitter:image" content="https://mzaini30.js.org/dist/jean.jpg">
+
+	<script defer src='/main.js' type="module"></script>
+</head>
+<body>
+</body>
+</html>
+```
+
+Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
+
+## Styling
+
+### Style Default
 
 Menggunakan Bootstrap.
 
@@ -83,59 +156,7 @@ Contoh:
 </style>
 ```
 
-### Code Splitting
-
-Cukup jalankan 
-
-```bash
-npm run build
-```
-
-### Router Berbasis File
-
-Kita menggunakan Routify. Ini tutorialnya: https://routify.dev/guide/introduction/getting-started
-
-### Hot Module Replacement
-
-Dia nggak mereset state saat kita development. Cukup jalankan:
-
-```bash
-npm run dev
-```
-
-### SEO
-
-Ini isi dari `public/index.html`:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
-
-	<title>Svelte Template</title>
-	<meta name="description" content="Template Svelte yang diolah oleh Zen">
-	<meta property="og:image" content="/dist/jean.jpg">
-	<link rel='icon' type='image/png' href='/dist/ungu.png'>
-	
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@blogodop">
-	<meta name="twitter:creator" content="@blogodop">
-	<meta name="twitter:title" content="Svelte Template">
-	<meta name="twitter:description" content="Template Svelte yang diolah oleh Zen">
-	<meta name="twitter:image" content="https://mzaini30.js.org/dist/jean.jpg">
-
-	<script defer src='/main.js' type="module"></script>
-</head>
-<body>
-</body>
-</html>
-
-
-```
-
-Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
+## Developer Experience
 
 ### Absolute Path
 
@@ -158,7 +179,3 @@ Untuk detailnya, kunjungi https://www.npmjs.com/package/kumpulan-tools
 ### Bisa Notifikasi
 
 Cara pakainya: https://saitama.my.id/menambahkan-notifikasi-di-svelte
-
-## Terjemahan?
-
-Boleh. Misalnya aja mau nerjemahkan ke bahasa Jepang, maka buat file `README-jp.md` yang berisi terjemahan README ini dalam bahasa Jepang.

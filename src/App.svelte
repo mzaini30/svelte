@@ -40,5 +40,8 @@
 			z-index: 100000000000000;
 			position: relative;
 		}
+		.notification {
+			box-shadow: 0 0 1px 0 !important;
+		}
 	}
 </style>

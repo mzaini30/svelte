@@ -8,7 +8,7 @@
     "@roxi/routify": "^2.7.3",
     "kumpulan-tools": "^1.0.0",
     "nollup": "^0.13.13",
-    "postcss": "^8.2.7",
+    "postcss": "^7.0.31",
     "rollup": "^2.3.4",
     "rollup-plugin-hot": "^0.1.0",
     "rollup-plugin-livereload": "^2.0.0",

@@ -1,7 +1,7 @@
 <?php
 	$judul = 'Svelte Template';
 	$deskripsi = 'Starter tools for building amazing site!';
-	$cover = '/dist/jean.jpg';
+	$cover = 'https://saitama.my.id/dist/jean.jpg'; // harus link lengkap
 	$icon = '/dist/ungu.png';
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 	<meta name="twitter:creator" content="@blogodop">
 	<meta name="twitter:title" content="<?= $judul ?>">
 	<meta name="twitter:description" content="<?= $deskripsi ?>">
-	<meta name="twitter:image" content="https://saitama.my.id<?= $cover ?>">
+	<meta name="twitter:image" content="<?= $cover ?>">
 
 	<script defer src='/main.js?<?= md5(rand()) ?>' type="module"></script>
 </head>
