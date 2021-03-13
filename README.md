@@ -51,7 +51,7 @@ Hasilnya ada di ssg/
 
 ### Upload ke Surge
 
-Pastikan sudah login surge di laptop. Kemudian, pastikan sudah membuat file CNAME di public/. Contoh isinya: `https://makanan.surge.sh`. Kemudian, untuk deploy hingga uploadnya, jalankan perintah:
+Pastikan sudah login surge di laptop. Pastikan juga sudah install spank (`npm i -g spank`). Kemudian, pastikan sudah membuat file CNAME di public/. Contoh isinya: `https://makanan.surge.sh`. Kemudian, untuk deploy hingga uploadnya, jalankan perintah:
 
 ```bash
 sh surge.sh
