@@ -41,6 +41,8 @@ npm run build
 
 ### Generate ke SSG
 
+Pastikan sudah install spank (`npm i -g spank`).
+
 Jalankan perintah:
 
 ```bash
