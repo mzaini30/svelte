@@ -7,6 +7,7 @@ import { terser } from 'rollup-plugin-terser'
 import hmr from 'rollup-plugin-hot'
 import alias from '@rollup/plugin-alias';
 import path from 'path';
+import {mdsvex} from 'mdsvex'
 // const {markdown} = require('svelte-preprocess-markdown');
 
 // Set this to true to pass the --single flag to sirv (this serves your
@@ -87,8 +88,13 @@ export default {
       ]
     }),
     svelte({
-      preprocess: sveltePreprocess(),
-      extensions: ['.svelte'],
+      preprocess: [
+        sveltePreprocess(),
+        mdsvex({
+          extension: '.md'
+        })
+      ],
+      extensions: ['.svelte', '.svx', '.md'],
       // enable run-time checks when not in production
       dev: !isProduction,
       // we'll extract any component CSS out into

@@ -7,6 +7,7 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@roxi/routify": "^2.7.3",
     "kumpulan-tools": "^1.0.0",
+    "mdsvex": "^0.8.9",
     "nollup": "^0.13.13",
     "postcss": "^7.0.31",
     "rollup": "^2.3.4",

@@ -59,7 +59,9 @@ Pastikan sudah login surge di laptop. Pastikan juga sudah install spank (`npm i 
 sh surge.sh
 ```
 
-## Kerangka (index.html)
+## Markup
+
+### index.html (SEO Ready)
 
 Ini isi dari `public/index.html`:
 
@@ -90,6 +92,10 @@ Ini isi dari `public/index.html`:
 ```
 
 Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
+
+### Markdown
+
+Mendukung Markdown.
 
 ## Styling
 
