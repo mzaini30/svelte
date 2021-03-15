@@ -8,6 +8,7 @@ import hmr from 'rollup-plugin-hot'
 import alias from '@rollup/plugin-alias';
 import path from 'path';
 import {mdsvex} from 'mdsvex'
+import { injectManifest } from 'rollup-plugin-workbox'
 // const {markdown} = require('svelte-preprocess-markdown');
 
 // Set this to true to pass the --single flag to sirv (this serves your
@@ -115,6 +116,14 @@ export default {
         //
         // https://github.com/rixo/rollup-plugin-svelte-hot#usage
       },
+    }),
+    injectManifest({
+        globDirectory: 'public',
+        globPatterns: ['**/*.{js,css,svg}', 'index.html'],
+        swSrc: `src/sw.js`,
+        swDest: `public/serviceworker.js`,
+        maximumFileSizeToCacheInBytes: 10000000, // 10 MB,
+        mode: 'production'
     }),
 
     // If you have external dependencies installed from

@@ -2,6 +2,7 @@
 	import { Router } from "@roxi/routify";
 	import { routes } from "../.routify/routes";
 	import Notifications from "svelte-notifications"
+	import Serviceworker from './Serviceworker.svelte';
 	let vh = 0
 	const tinggiFull = () => {
 		vh = window.innerHeight * 0.01
@@ -14,6 +15,7 @@
 <Notifications>
 	<Router {routes}/>
 </Notifications>
+<Serviceworker/>
 
 <svelte:head>
 	<link rel='stylesheet' href='/dist/bootstrap.min.css'>
