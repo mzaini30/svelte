@@ -1,189 +1,50 @@
-# Template Svelte Olahanku
+# Svelte + Vite
 
-Oh iya, buat yang belum paham cara pakai Svelte, kunjungi dulu tutorialnya ya di https://svelte.dev/tutorial/basics
+This template should help get you started developing with Svelte in Vite.
 
-## Instalasi
+## Recommended IDE Setup
 
-```bash
-npm init svelte-zen
-npm i
+[VSCode](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+
+## Need an official Svelte framework?
+
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+
+## Technical considerations
+
+**Why use this over SvelteKit?**
+
+- SvelteKit is still a work-in-progress.
+- It currently does not support the pure-SPA use case.
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+
+This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-app` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+
+**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+
+Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+
+**Why include `.vscode/extensions.json`?**
+
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+
+**Why enable `checkJs` in the JS template?**
+
+It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+
+**Why is HMR not preserving my local component state?**
+
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+
+```js
+// store.js
+// An extremely simple external store
+import { writable } from 'svelte/store'
+export default writable(0)
 ```
-
-## Struktur Folder
-
-| Keterangan | Folder |
-|---|---|
-| Routes | src/pages/ |
-| Output | public/ |
-| Output SSG | ssg/ |
-
-## Routing (Berbasis File dari Routify)
-
-Kita menggunakan Routify. Ini tutorialnya: https://routify.dev/guide/introduction/getting-started
-
-## Development dan Build
-
-### Development (Menggunakan HMR Nollup)
-
-Dia nggak mereset state saat kita development. Cukup jalankan:
-
-```bash
-npm run dev
-```
-
-### Build (Code Splitting)
-
-Cukup jalankan 
-
-```bash
-npm run build
-```
-
-### Generate ke SSG
-
-Pastikan sudah install spank (`npm i -g spank`).
-
-Jalankan perintah:
-
-```bash
-sh static.sh
-```
-
-Hasilnya ada di ssg/
-
-### Upload ke Surge
-
-Pastikan sudah login surge di laptop. Pastikan juga sudah install spank (`npm i -g spank`). Kemudian, pastikan sudah membuat file CNAME di public/. Contoh isinya: `https://makanan.surge.sh`. Kemudian, untuk deploy hingga uploadnya, jalankan perintah:
-
-```bash
-sh surge.sh
-```
-
-## Markup
-
-### index.html (SEO Ready)
-
-Ini isi dari `public/index.html`:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
-
-	<title>Svelte Template</title>
-	<meta name="description" content="Template Svelte yang diolah oleh Zen">
-	<meta property="og:image" content="/dist/jean.jpg">
-	<link rel='icon' type='image/png' href='/dist/ungu.png'>
-	
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@blogodop">
-	<meta name="twitter:creator" content="@blogodop">
-	<meta name="twitter:title" content="Svelte Template">
-	<meta name="twitter:description" content="Template Svelte yang diolah oleh Zen">
-	<meta name="twitter:image" content="https://mzaini30.js.org/dist/jean.jpg">
-
-	<script defer src='/main.js' type="module"></script>
-</head>
-<body>
-</body>
-</html>
-```
-
-Nanti tinggal disesuaikan aja tag title, meta description, dan og image.
-
-### Markdown
-
-Mendukung Markdown.
-
-## Styling
-
-### Style Default
-
-Menggunakan Bootstrap.
-
-Untuk menonaktifkannya, hapus aja Bootstrapnya di `src/App.svelte`.
-
-### Bisa Menggunakan SASS
-
-Tutorial SASS di Web Programming Unpas: https://youtube.com/playlist?list=PLFIM0718LjIUqemgG97MAOK0J_berlQM5
-
-Contoh:
-
-```html
-<div class="container pt-3">
-	<h1>Hello World</h1>
-</div>
-
-<style type="text/scss">
-	$warna: red;
-	$ukuran: 100px;
-	h1 {
-		color: $warna;
-		font-size: $ukuran;
-	}
-</style>
-```
-
-### Bisa Juga Dibuat Global Stylenya
-
-Contoh:
-
-```html
-<style type="text/scss" global>
-	p {
-		color: green;
-		strong {
-			text-transform: uppercase;
-		}
-	}
-</style>
-```
-
-### Bisa Menggabungkan Global Style dan Scoped
-
-Contoh: 
-
-```html
-<style type="text/scss">
-	:global {
-		p {
-			color: green;
-			strong {
-				text-transform: uppercase;
-			}
-		}
-		a {
-			color: red;
-		}
-	}
-	h1 {
-		text-align: center;
-	}
-</style>
-```
-
-## Developer Experience
-
-### Absolute Path
-
-Contoh:
-
-```javascript
-import {nama} from '@/data/nama'
-```
-
-Tapi, bisa juga relative path seperti:
-
-```javascript
-import {nama} from '../../../nama'
-```
-
-### Berbagai Tools Siap Pakai
-
-Untuk detailnya, kunjungi https://www.npmjs.com/package/kumpulan-tools
-
-### Bisa Notifikasi
-
-Cara pakainya: https://saitama.my.id/menambahkan-notifikasi-di-svelte

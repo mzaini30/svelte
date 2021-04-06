@@ -1,5 +1,4 @@
-.DS_Store
-.routify
 /node_modules/
-public/*.js
-ssg/
+/dist/
+/.vscode/
+.DS_Store

@@ -1,49 +1,22 @@
 <script>
-	import { Router } from "@roxi/routify";
-	import { routes } from "../.routify/routes";
-	import Notifications from "svelte-notifications"
-	import Serviceworker from './Serviceworker.svelte';
-	let vh = 0
-	const tinggiFull = () => {
-		vh = window.innerHeight * 0.01
-		document.documentElement.style.setProperty("--vh", `${vh}px`)
-	}
-	tinggiFull()
-	window.addEventListener("resize", tinggiFull)
+    import { Router } from "@roxi/routify";
+    import { routes } from "../.routify/routes";
+    import Notifications from 'svelte-notifications'
+    import 'windi.css'
 </script>
 
 <Notifications>
-	<Router {routes}/>
+    <Router {routes}/>
 </Notifications>
-<Serviceworker/>
 
-<svelte:head>
-	<link rel='stylesheet' href='/dist/bootstrap.min.css'>
-</svelte:head>
-
-<style type="text/scss">
-	:global {
-		* {
-			word-wrap: break-word;
-		}
-		.h-screen {
-			height: 100vh;
-			height: calc(var(--vh, 1vh) * 100);
-		}
-		.min-h-screen {
-			min-height: 100vh;
-			min-height: calc(var(--vh, 1vh) * 100);
-		}
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-		.notifications {
-			z-index: 100000000000000;
-			position: relative;
-		}
-		.notification {
-			box-shadow: 0 0 1px 0 !important;
-		}
-	}
+<style lang="scss">
+  :global {
+    .notifications {
+        z-index: 100000000;
+        position: relative;
+    }
+    .notification {
+        box-shadow: 0 0 5px 0 gray !important;
+    }
+  }
 </style>
