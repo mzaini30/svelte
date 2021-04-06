@@ -1,1 +1,4 @@
-<div class="container py-3">Hello World</div>import 'virtual:windi.css'
+<div class="prose">
+	<h1>Hai..</h1>
+	<p>Halo..</p>
+</div>
