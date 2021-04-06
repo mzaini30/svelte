@@ -17,7 +17,7 @@
     "svelte": "^3.35.0",
     "svelte-notifications": "^0.9.9",
     "svelte-preprocess": "^4.7.0",
-    "vite": "^2.1.5",
-    "vite-plugin-windicss": "^0.12.5"
+    "svelte-windicss-preprocess": "^3.3.0",
+    "vite": "^2.1.5"
   }
 }

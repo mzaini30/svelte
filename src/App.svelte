@@ -2,7 +2,6 @@
     import { Router } from "@roxi/routify";
     import { routes } from "../.routify/routes";
     import Notifications from 'svelte-notifications'
-    import 'windi.css'
 </script>
 
 <Notifications>
