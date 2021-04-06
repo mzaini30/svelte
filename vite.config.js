@@ -8,7 +8,9 @@ export default defineConfig({
 	  svelte({
 	  	preprocess: [
 	  		preprocess(),
-	  		require('svelte-windicss-preprocess').preprocess()
+	  		require('svelte-windicss-preprocess').preprocess({
+	  			config: 'tailwind.config.js'
+	  		})
 	  	]
 	  }),
   ],
