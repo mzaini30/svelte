@@ -6,12 +6,7 @@ import preprocess from 'svelte-preprocess'
 export default defineConfig({
   plugins: [
 	  svelte({
-	  	preprocess: [
-	  		preprocess(),
-	  		require('svelte-windicss-preprocess').preprocess({
-	  			config: 'tailwind.config.js'
-	  		})
-	  	]
+	  	preprocess: preprocess()
 	  }),
   ],
   build: {

@@ -2,6 +2,7 @@
     import { Router } from "@roxi/routify";
     import { routes } from "../.routify/routes";
     import Notifications from 'svelte-notifications'
+    import './tailwind.css'
 </script>
 
 <Notifications>
@@ -9,13 +10,13 @@
 </Notifications>
 
 <style lang="scss">
-  :global {
-    .notifications {
-        z-index: 100000000;
-        position: relative;
+    :global {
+        .notifications {
+            z-index: 100000000;
+            position: relative;
+        }
+        .notification {
+            box-shadow: 0 0 5px 0 gray !important;
+        }
     }
-    .notification {
-        box-shadow: 0 0 5px 0 gray !important;
-    }
-  }
 </style>
