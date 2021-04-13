@@ -11,6 +11,9 @@
 
 <style lang="scss">
     :global {
+        * {
+            word-wrap: break-word;
+        }
         .notifications {
             z-index: 100000000;
             position: relative;
