@@ -1,17 +1,17 @@
 
 /**
  * @roxi/routify 2.15.1
- * File generated Tue Apr 20 2021 10:05:43 GMT+0800 (Waktu Indonesia Tengah)
+ * File generated Wed Apr 21 2021 00:20:38 GMT+0800 (Waktu Indonesia Tengah)
  */
 
 export const __version = "2.15.1"
-export const __timestamp = "2021-04-20T02:05:43.864Z"
+export const __timestamp = "2021-04-20T16:20:38.448Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
 
 //imports
-import _index from '../src/pages/index.svelte'
+
 
 //options
 export const options = {}
@@ -47,7 +47,7 @@ export const _tree = {
       },
       "path": "/index",
       "id": "_index",
-      "component": () => _index
+      "component": () => import('../src/pages/index.svelte').then(m => m.default)
     }
   ],
   "isLayout": false,

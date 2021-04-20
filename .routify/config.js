@@ -3,7 +3,7 @@ module.exports = {
   "sourceDir": "public",
   "routifyDir": ".routify",
   "ignore": "",
-  "dynamicImports": false,
+  "dynamicImports": true,
   "singleBuild": false,
   "noHashScroll": false,
   "distDir": "dist",
@@ -14,5 +14,5 @@ module.exports = {
     "md",
     "svx"
   ],
-  "started": "2021-04-20T02:05:43.755Z"
+  "started": "2021-04-20T16:20:38.169Z"
 }
