@@ -22,6 +22,7 @@
     "svelte-notifications": "^0.9.9",
     "svelte-preprocess": "^4.7.0",
     "tailwindcss": "^2.1.1",
-    "vite": "^2.1.5"
+    "vite": "^2.1.5",
+    "vite-plugin-pwa": "^0.7.2"
   }
 }
