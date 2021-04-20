@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.15.1
- * File generated Sat Apr 10 2021 20:44:18 GMT+0800 (Waktu Indonesia Tengah)
+ * File generated Tue Apr 20 2021 10:05:43 GMT+0800 (Waktu Indonesia Tengah)
  */
 
 export const __version = "2.15.1"
-export const __timestamp = "2021-04-10T12:44:18.352Z"
+export const __timestamp = "2021-04-20T02:05:43.864Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -18,16 +18,47 @@ export const options = {}
 
 //tree
 export const _tree = {
+  "name": "root",
+  "filepath": "/",
   "root": true,
+  "ownMeta": {},
+  "absolutePath": "src/pages",
   "children": [
     {
+      "isFile": true,
+      "isDir": false,
+      "file": "index.svelte",
+      "filepath": "/index.svelte",
+      "name": "index",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/home/zen/Dokumen/website/svelte/src/pages/index.svelte",
+      "importPath": "../src/pages/index.svelte",
+      "isLayout": false,
+      "isReset": false,
       "isIndex": true,
+      "isFallback": false,
       "isPage": true,
+      "ownMeta": {},
+      "meta": {
+        "recursive": true,
+        "preload": false,
+        "prerender": true
+      },
       "path": "/index",
       "id": "_index",
       "component": () => _index
     }
   ],
+  "isLayout": false,
+  "isReset": false,
+  "isIndex": false,
+  "isFallback": false,
+  "meta": {
+    "recursive": true,
+    "preload": false,
+    "prerender": true
+  },
   "path": "/"
 }
 
