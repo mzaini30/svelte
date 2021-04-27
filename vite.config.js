@@ -3,6 +3,8 @@ import svelte from '@sveltejs/vite-plugin-svelte'
 import preprocess from 'svelte-preprocess'
 import { VitePWA } from 'vite-plugin-pwa'
 
+const namaAplikasi = 'Svelte Vite'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -13,6 +15,8 @@ export default defineConfig({
       srcDir: 'src',
       manifest: {
         display: 'minimal-ui',
+        name: namaAplikasi,
+        short_name: namaAplikasi,
         icons: [
           {
             src: "/logo.png",
