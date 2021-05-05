@@ -4,9 +4,9 @@
 
 - Developing & build cepat (pakai Vite)
 - Hasil build kecil (pakai brotli di Vite)
-- PWA
+- PWA (pakai Vite Plugin PWA)
 - Routing berbasis file (pakai Routify)
-- Desain fleksibel dan elegan (pakai Tailwind JIT)
+- Desain fleksibel dan elegan (pakai Windi CSS)
 
 ## Setting
 
@@ -32,8 +32,8 @@ export default defineConfig({
       srcDir: 'src',
       manifest: {
         display: 'minimal-ui',
-+        name: namaAplikasi,
-+        short_name: namaAplikasi,
+        name: namaAplikasi,
+        short_name: namaAplikasi,
         icons: [
           {
             src: "/logo.png",

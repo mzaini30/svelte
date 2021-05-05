@@ -11,9 +11,6 @@
   "devDependencies": {
     "@roxi/routify": "^2.15.1",
     "@sveltejs/vite-plugin-svelte": "next",
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.3.2",
-    "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.9",
@@ -21,7 +18,7 @@
     "svelte": "^3.35.0",
     "svelte-notifications": "^0.9.9",
     "svelte-preprocess": "^4.7.0",
-    "tailwindcss": "^2.1.1",
+    "svelte-windicss-preprocess": "^3.5.3",
     "vite": "^2.1.5",
     "vite-plugin-pwa": "^0.7.2"
   }

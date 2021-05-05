@@ -28,13 +28,19 @@ export default defineConfig({
       }
     }),
 	  svelte({
-	  	preprocess: preprocess()
+	  	preprocess: [
+        preprocess(),
+        require('svelte-windicss-preprocess').preprocess()
+      ]
 	  }),
   ],
   optimizeDeps: {
       exclude: [
           '@roxi/routify',
           'svelte-notifications'
+      ],
+      include: [
+        './windi.config.js'
       ]
   }
 })
