@@ -39,8 +39,8 @@ export default defineConfig({
           '@roxi/routify',
           'svelte-notifications'
       ],
-      include: [
-        './windi.config.js'
-      ]
+      // include: [
+      //   './windi.config.js'
+      // ]
   }
 })
