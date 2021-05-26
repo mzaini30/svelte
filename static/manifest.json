@@ -1,0 +1,16 @@
+{
+	"name":"Zen",
+	"short_name":"Zen",
+	"start_url":"/",
+	"display":"minimal-ui",
+	"background_color":"#ffffff",
+	"lang":"id",
+	"scope":"/",
+	"icons":[
+		{
+			"src":"/logo.png",
+			"sizes":"892x892",
+			"type":"image/png"
+		}
+	]
+}
