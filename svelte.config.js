@@ -1,5 +1,5 @@
-import { windi } from "svelte-windicss-preprocess"
-import adapter from '@sveltejs/adapter-static'
+import { windi } from 'svelte-windicss-preprocess';
+import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +8,9 @@ const config = {
 		target: '#svelte',
 		adapter: adapter()
 	},
-	preprocess: windi()
+	preprocess: windi({
+		configPath: 'windi.config.cjs'
+	})
 };
 
 export default config;

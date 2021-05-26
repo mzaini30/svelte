@@ -1,22 +1,22 @@
 {
-  "name": "~TODO~",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build && node ubahQuery.js && rm build/sw.js && workbox generateSW workbox-config.cjs",
-    "preview": "svelte-kit preview",
-    "lint": "prettier --check --plugin-search-dir=. .",
-    "format": "prettier --write --plugin-search-dir=. ."
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.11",
-    "@sveltejs/kit": "next",
-    "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "replace": "^1.2.1",
-    "svelte": "^3.34.0",
-    "svelte-windicss-preprocess": "^4.0.5",
-    "workbox-cli": "^6.1.5"
-  },
-  "type": "module"
+	"name": "~TODO~",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build && node ubahQuery.js && rm build/sw.js && workbox generateSW workbox-config.cjs",
+		"preview": "svelte-kit preview",
+		"lint": "prettier --check --plugin-search-dir=. .",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^1.0.0-next.11",
+		"@sveltejs/kit": "next",
+		"prettier": "~2.2.1",
+		"prettier-plugin-svelte": "^2.2.0",
+		"replace": "^1.2.1",
+		"svelte": "^3.34.0",
+		"svelte-windicss-preprocess": "^4.0.5",
+		"workbox-cli": "^6.1.5"
+	},
+	"type": "module"
 }
