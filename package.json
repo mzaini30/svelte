@@ -6,7 +6,7 @@
 		"build": "svelte-kit build && node ubahQuery.js && rm build/sw.js && workbox generateSW workbox-config.cjs",
 		"preview": "svelte-kit preview",
 		"lint": "prettier --check --plugin-search-dir=. .",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"format": "prettier --write --plugin-search-dir=. src"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.11",
