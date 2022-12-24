@@ -1,9 +1,12 @@
 <script>
   import Router from "svelte-spa-router";
   import routes from "virtual:generated-pages-svelte";
+  import { App } from "framework7-svelte";
 </script>
 
-<Router {routes} />
+<App>
+  <Router {routes} />
+</App>
 
 <style>
   :global(*) {
