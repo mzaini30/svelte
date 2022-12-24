@@ -1,22 +1,23 @@
 {
-	"name": "~TODO~",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build && node ubahQuery.js && rm build/sw.js && workbox generateSW workbox-config.cjs",
-		"preview": "svelte-kit preview",
-		"lint": "prettier --check --plugin-search-dir=. .",
-		"format": "prettier --write --plugin-search-dir=. src"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-static": "^1.0.0-next.11",
-		"@sveltejs/kit": "next",
-		"prettier": "~2.2.1",
-		"prettier-plugin-svelte": "^2.2.0",
-		"replace": "^1.2.1",
-		"svelte": "^3.34.0",
-		"svelte-windicss-preprocess": "^4.0.5",
-		"workbox-cli": "^6.1.5"
-	},
-	"type": "module"
+  "name": "vite-project",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:android": "vite build --mode android --base /assets/ && node script/after-build.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.2",
+    "svelte": "^3.49.0",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-legacy": "^2.1.0",
+    "svelte-spa-router": "^3.3.0",
+    "terser": "^5.15.0",
+    "vite-plugin-pages-svelte": "0.0.1"
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "name": "Hello World",
+  "description": "This is for testing",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
