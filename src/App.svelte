@@ -4,7 +4,7 @@
   import { App } from "framework7-svelte";
 </script>
 
-<App>
+<App theme="ios">
   <Router {routes} />
 </App>
 
