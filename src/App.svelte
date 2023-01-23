@@ -1,6 +1,7 @@
 <script>
   import Router from "svelte-spa-router";
   import routes from "virtual:generated-pages-svelte";
+  import 'virtual:windi.css'
 </script>
 
 <Router {routes} />
