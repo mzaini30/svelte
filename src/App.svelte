@@ -1,7 +1,7 @@
 <script>
   import Router from "svelte-spa-router";
   import routes from "virtual:generated-pages-svelte";
-  import 'virtual:windi.css'
+  import "./tailwind.css";
 </script>
 
 <Router {routes} />
