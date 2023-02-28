@@ -2,16 +2,19 @@ import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import legacy from "@vitejs/plugin-legacy";
 import pages from "vite-plugin-pages-svelte";
-import preprocess from "svelte-preprocess";
+import { stylifyVite } from '@stylify/unplugin';
+
+const stylifyPlugin = stylifyVite({
+    bundles: [{
+        outputFile: './src/stylify.css',
+        files: ['./src/**/*.svelte'],
+        rewriteSelectorsInFiles: false,
+    }]
+});
 
 let plugins = [
-  svelte({
-    preprocess: [
-      preprocess({
-        postcss: true,
-      }),
-    ],
-  }),
+  stylifyPlugin,
+  svelte(),
   pages(),
 ];
 

@@ -1,8 +1,9 @@
-<script lang="ts">
+<script>
   import Router from "svelte-spa-router";
   // @ts-ignore
   import routes from "virtual:generated-pages-svelte";
-  import "./tailwind.css";
+  import "@unocss/reset/tailwind.css";
+  import "./stylify.css";
 </script>
 
 <Router {routes} />
