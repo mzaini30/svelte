@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:android": "vite build --mode android --base /assets/ && node script/after-build.js",
+    "build:online": "vite build --mode online",
     "preview": "vite preview"
   },
   "devDependencies": {

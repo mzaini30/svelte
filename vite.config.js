@@ -4,16 +4,17 @@ import legacy from "@vitejs/plugin-legacy";
 import pages from "vite-plugin-pages-svelte";
 import { stylifyVite } from '@stylify/unplugin';
 
-const stylifyPlugin = stylifyVite({
+const stylifyPlugin = (mangle) => (stylifyVite({
     bundles: [{
         outputFile: './src/stylify.css',
         files: ['./src/**/*.svelte'],
-        rewriteSelectorsInFiles: false,
-    }]
-});
+    }],
+    compiler: {
+      mangleSelectors: mangle
+    }
+}));
 
 let plugins = [
-  stylifyPlugin,
   svelte(),
   pages(),
 ];
@@ -22,11 +23,15 @@ let plugins = [
 export default defineConfig(({ mode }) => {
   if (mode == "android") {
     return {
-      plugins: [legacy(), ...plugins],
+      plugins: [legacy(), ...plugins, stylifyPlugin(false)],
+    };
+  } else if (mode == "online") {
+    return {
+      plugins: [...plugins, stylifyPlugin(true)],
     };
   } else {
     return {
-      plugins: [...plugins],
+      plugins: [...plugins, stylifyPlugin(false)],
     };
   }
 });
