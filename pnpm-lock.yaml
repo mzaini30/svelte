@@ -10,7 +10,7 @@ specifiers:
   terser: ^5.15.0
   vite: ^3.1.0
   vite-plugin-pages-svelte: 0.0.1
-  warna-tailwind: ^0.0.1
+  warna-tailwind: ^0.0.3
 
 dependencies:
   '@unocss/reset': 0.50.1
@@ -19,7 +19,7 @@ dependencies:
   svelte-spa-router: 3.3.0
   terser: 5.15.0
   vite-plugin-pages-svelte: 0.0.1_cifgapkqnqjvj6z74goxxamy3q
-  warna-tailwind: 0.0.1
+  warna-tailwind: 0.0.3
 
 devDependencies:
   '@sveltejs/vite-plugin-svelte': 1.0.6_svelte@3.50.1+vite@3.1.2
@@ -1023,8 +1023,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /warna-tailwind/0.0.1:
-    resolution: {integrity: sha512-fuCGP8+jGXo5HdeA7275ZuPWAJcuDWRF4aUvx9V7KDSM2VmVB3HJK8UTuuDpmzWDEVQ6RpqPaNNUAcKAI1xVBg==}
+  /warna-tailwind/0.0.3:
+    resolution: {integrity: sha512-rLxGWMu7DBkvVX1SCisTlChL9ZFdDph/tNJndfQZ2LAa82cnBZ4s1ORpX5a8BlXp6d5WdttwebY4r3FfC6LhBg==}
     dev: false
 
   /which-boxed-primitive/1.0.2:

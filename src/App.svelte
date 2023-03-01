@@ -3,7 +3,7 @@
   // @ts-ignore
   import routes from "virtual:generated-pages-svelte";
   import "@unocss/reset/tailwind.css";
-  import "warna-tailwind";
+  import "warna-tailwind/warna.css";
 </script>
 
 <Router {routes} />

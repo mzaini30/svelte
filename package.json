@@ -21,6 +21,6 @@
     "svelte-spa-router": "^3.3.0",
     "terser": "^5.15.0",
     "vite-plugin-pages-svelte": "0.0.1",
-    "warna-tailwind": "^0.0.1"
+    "warna-tailwind": "^0.0.3"
   }
 }
