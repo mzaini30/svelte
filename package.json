@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "vite build",
     "build:android": "vite build --mode android --base /assets/ && node script/after-build.js",
-    "build:online": "vite build --mode online",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -16,14 +15,12 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
-    "@stylify/unplugin": "^0.5.27",
     "@unocss/reset": "^0.50.1",
     "@vitejs/plugin-legacy": "^2.1.0",
     "postcss-load-config": "^4.0.1",
-    "svelte-preprocess": "^5.0.1",
     "svelte-spa-router": "^3.3.0",
     "terser": "^5.15.0",
-    "typescript": "^4.9.4",
-    "vite-plugin-pages-svelte": "0.0.1"
+    "vite-plugin-pages-svelte": "0.0.1",
+    "warna-tailwind": "^0.0.1"
   }
 }
