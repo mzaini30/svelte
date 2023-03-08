@@ -15,6 +15,5 @@
   /* chrome extension */
   /* :global(body) {
     width: 350px;
-    font-size: 16px;
   } */
 </style>
