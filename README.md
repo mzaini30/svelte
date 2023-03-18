@@ -13,3 +13,5 @@ Builds for Android apps:
 ```bash
 npm run build:android
 ```
+
+[chat developer](https://wa.me/6281545143654)
