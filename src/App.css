@@ -1,0 +1,10 @@
+* {
+  word-wrap: break-word;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+/* chrome extension */
+body {
+  /* width: 350px; */
+  /* height: 545px; */
+}
