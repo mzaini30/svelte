@@ -3,17 +3,8 @@
   // @ts-ignore
   import routes from "virtual:generated-pages-svelte";
   import "@unocss/reset/tailwind.css";
-  import "uno.css";
+  import "warna-tailwind/warna.css";
+  import "./App.css";
 </script>
 
 <Router {routes} />
-
-<style>
-  :global(*) {
-    word-wrap: break-word;
-  }
-  /* chrome extension */
-  /* :global(body) {
-    min-width: 350px;
-  } */
-</style>
