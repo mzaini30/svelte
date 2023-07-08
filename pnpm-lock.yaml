@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -14,6 +14,9 @@ dependencies:
   postcss-load-config:
     specifier: ^4.0.1
     version: 4.0.1(postcss@8.4.21)
+  stat-aja:
+    specifier: ^0.0.1
+    version: 0.0.1
   svelte-spa-router:
     specifier: ^3.3.0
     version: 3.3.0
@@ -828,6 +831,10 @@ packages:
   /estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
 
+  /excalibur-zen@0.0.3:
+    resolution: {integrity: sha512-SZq9XlhYezzzU34FJmOcMscvrUtyGnhLkaIOPNLb9liZxg5wgzf/6OJXiJLFIlkcvCyPiVDvjWawOKZFfnyEcw==}
+    dev: false
+
   /execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -1457,6 +1464,12 @@ packages:
 
   /sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
+
+  /stat-aja@0.0.1:
+    resolution: {integrity: sha512-KGv5o5aNLsOnxrRH1a6ylTdEvzjfSxR0HguFPKb3H+LT6hfgUY2r5KrJFh0gk+sXG82dKEUkdzRiX+Z4VyIdmQ==}
+    dependencies:
+      excalibur-zen: 0.0.3
+    dev: false
 
   /string.prototype.trimend@1.0.5:
     resolution: {integrity: sha512-I7RGvmjV4pJ7O3kdf+LXFpVfdNOxtCW/2C8f6jNiW4+PQchwxkCDzlk1/7p+Wl4bqFIZeF47qAHXLuHHWKAxog==}
