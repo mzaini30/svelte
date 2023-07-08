@@ -15,8 +15,8 @@ dependencies:
     specifier: ^4.0.1
     version: 4.0.1(postcss@8.4.21)
   stat-aja:
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^1.0.0
+    version: 1.0.0
   svelte-spa-router:
     specifier: ^3.3.0
     version: 3.3.0
@@ -1465,8 +1465,8 @@ packages:
   /sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
 
-  /stat-aja@0.0.1:
-    resolution: {integrity: sha512-KGv5o5aNLsOnxrRH1a6ylTdEvzjfSxR0HguFPKb3H+LT6hfgUY2r5KrJFh0gk+sXG82dKEUkdzRiX+Z4VyIdmQ==}
+  /stat-aja@1.0.0:
+    resolution: {integrity: sha512-NoyAjHkqD17IjRHmbEoDFDCpulGCeqFXdDbj06Iubtyrkilf/H9uh5EVq7q5fWwQJRnrBGHtMoPS0LjWRiR3BQ==}
     dependencies:
       excalibur-zen: 0.0.3
     dev: false
