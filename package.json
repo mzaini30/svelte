@@ -19,6 +19,7 @@
     "@unocss/reset": "^0.50.1",
     "@vitejs/plugin-legacy": "^2.1.0",
     "postcss-load-config": "^4.0.1",
+    "prettier-plugin-svelte": "^3.0.0",
     "stat-aja": "^1.0.0",
     "svelte-spa-router": "^3.3.0",
     "terser": "^5.15.0",
