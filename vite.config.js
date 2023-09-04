@@ -5,14 +5,16 @@ import pages from "vite-plugin-pages-svelte";
 import uno_css from "unocss/vite";
 import transformerVariantGroup from "@unocss/transformer-variant-group";
 import transformer_directives from "@unocss/transformer-directives";
+import { presetWind } from "unocss";
 
 let plugins = [
   svelte(),
   pages(),
-  uno_css({
-    // ...
-    transformers: [transformerVariantGroup(), transformer_directives()],
-  }),
+  // uno_css({
+  //   // ...
+  //   transformers: [transformerVariantGroup(), transformer_directives()],
+  //   // presets: [presetWind()],
+  // }),
 ];
 
 // https://vitejs.dev/config/
