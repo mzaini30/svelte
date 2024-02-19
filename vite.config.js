@@ -1,31 +1,27 @@
-import { defineConfig } from "vite";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
-import legacy from "@vitejs/plugin-legacy";
-import pages from "vite-plugin-pages-svelte";
-import uno_css from "unocss/vite";
-import transformerVariantGroup from "@unocss/transformer-variant-group";
-import transformer_directives from "@unocss/transformer-directives";
-import { presetWind } from "unocss";
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+import routify from '@roxi/routify/vite-plugin'
+import { defineConfig } from 'vite'
+import { mdsvex } from 'mdsvex'
+import { resolve } from 'path'
+import postCssNesting from 'postcss-nesting'
 
-let plugins = [
-  svelte(),
-  pages(),
-  // uno_css({
-  //   // ...
-  //   transformers: [transformerVariantGroup(), transformer_directives()],
-  //   // presets: [presetWind()],
-  // }),
-];
+const production = process.env.NODE_ENV === 'production'
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  if (mode == "android") {
-    return {
-      plugins: [legacy(), ...plugins],
-    };
-  } else {
-    return {
-      plugins: [...plugins],
-    };
-  }
-});
+export default defineConfig({
+    clearScreen: false,
+    resolve: { alias: { '@': resolve('src') } },
+    plugins: [
+        routify({ render: { ssr: { enable: production } } }),
+        svelte({
+            compilerOptions: {
+                dev: !production,
+                hydratable: !!process.env.ROUTIFY_SSR_ENABLE,
+            },
+            extensions: ['.md', '.svelte'],
+            preprocess: [mdsvex({ extension: 'md' })],
+        }),
+    ],
+    css: { postcss: { plugins: [postCssNesting()] } },
+
+    server: { port: 1337 },
+})

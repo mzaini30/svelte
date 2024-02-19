@@ -1,14 +1,8 @@
-<script>
-  import Router from "svelte-spa-router";
-  // @ts-ignore
-  import routes from "virtual:generated-pages-svelte";
-  import "@unocss/reset/tailwind.css";
-  // import "warna-tailwind/warna.css";
-  import "./App.css";
-  // import "uno.css";
-  import stat_aja from "stat-aja";
+<script context="module">
+    import { Router, createRouter } from '@roxi/routify'
+    import routes from '../.routify/routes.default.js'
 
-  // stat_aja({ judul: "Judul Aplikasi", tipe: "Aplikasi Android" });
+    export const router = createRouter({ routes })
 </script>
 
-<Router {routes} />
+<Router {router} />
