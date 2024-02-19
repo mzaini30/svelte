@@ -4,3 +4,6 @@
 [submodule "src/lib/sql"]
 	path = src/lib/sql
 	url = git@github.com:mzaini30/sql-only.git
+[submodule "src/lib/tools"]
+	path = src/lib/tools
+	url = git@github.com:mzaini30/tools.git
