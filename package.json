@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build:android": "vite build --base /assets/ && node ./script/afterBuild.mjs && node ./script/convertToAndroidApp.mjs",
     "preview": "vite preview",
     "dev": "vite"
   },
@@ -24,9 +25,13 @@
     "alasql": "^4.2.7",
     "bits-ui": "^0.18.1",
     "clsx": "^2.1.0",
+    "flowbite": "^2.3.0",
+    "flowbite-svelte": "^0.44.23",
+    "md5": "^2.3.0",
     "postcss-nesting": "^11.3.0",
     "radix-icons-svelte": "^1.2.1",
     "tailwind-merge": "^2.2.1",
-    "tailwind-variants": "^0.2.0"
+    "tailwind-variants": "^0.2.0",
+    "zx": "^7.2.3"
   }
 }
