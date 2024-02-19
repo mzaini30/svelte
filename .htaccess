@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} /dist/client/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+
+RewriteRule ^((?!dist/client/).*)$ dist/client/$1 [L,NC]
