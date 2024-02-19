@@ -28,8 +28,9 @@ export default defineConfig({
         }),
         svelte({
             // compilerOptions: {
-            //     dev: !production,
-            //     hydratable: !!process.env.ROUTIFY_SSR_ENABLE,
+            // dev: !production,
+            // hydratable: !!process.env.ROUTIFY_SSR_ENABLE,
+            // hydratable: false,
             // },
             extensions: ['.md', '.svelte'],
             preprocess: [mdsvex({ extension: 'md' })],
