@@ -1,7 +1,14 @@
 RewriteEngine On
+RewriteBase /
 
-# Redirect all requests to /dist/client/index.html
-RewriteCond %{REQUEST_URI} !^/dist/client/index.html
-RewriteCond %{REQUEST_URI} !-f
-RewriteCond %{REQUEST_URI} !-d
-RewriteRule ^(.*)$ /dist/client/index.html [L]
+# Rewrite requests for files with extensions
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+\..+)$ /dist/client/$1 [L]
+
+# Rewrite root to /dist/client/index.html
+RewriteRule ^$ /dist/client/index.html [L]
+
+# Rewrite all other requests to /dist/client/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /dist/client/index.html [L]
