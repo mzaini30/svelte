@@ -1,6 +1,7 @@
 RewriteEngine On
 
-RewriteCond %{THE_REQUEST} /dist/client/([^\s?]*) [NC]
-RewriteRule ^ %1 [L,NE,R=302]
-
-RewriteRule ^((?!dist/client/).*)$ dist/client/$1 [L,NC]
+# Redirect all requests to /dist/client/index.html
+RewriteCond %{REQUEST_URI} !^/dist/client/index.html
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !-d
+RewriteRule ^(.*)$ /dist/client/index.html [L]
