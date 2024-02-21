@@ -35,8 +35,8 @@ export default defineConfig({
             extensions: ['.md', '.svelte'],
             preprocess: [mdsvex({ extension: 'md' })],
         }),
-        chunk(),
-        legacy(),
+        // chunk(),
+        //  legacy(),
     ],
     // css: { postcss: { plugins: [postCssNesting()] } },
 
