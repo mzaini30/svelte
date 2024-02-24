@@ -7,8 +7,8 @@
   export const router = createRouter({
     routes,
     urlRewrite: {
-      toExternal: (url) => `#${url}`, // prepend URLs with #
-      toInternal: (url) => url.replace(/^.+#/, ''), // remove leading #
+      toExternal: (url) => `#${url}/`, // prepend URLs with #/
+      toInternal: (url) => url.replace(/^.+#\//, ''), // remove leading #/
     },
   })
 </script>
