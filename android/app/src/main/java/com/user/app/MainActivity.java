@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (savedInstanceState == null) {
-            webview.loadUrl("https://appassets.androidplatform.net/assets/index.html");
+            webview.loadUrl("https://appassets.androidplatform.net/assets/index.html#/");
         }
 
     }
