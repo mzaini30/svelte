@@ -1,0 +1,29 @@
+{
+  "name": "android",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base /assets/ && node ./script/afterBuild.mjs && node ./script/convertToAndroidApp.mjs",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "svelte": "^4.2.8",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@vitejs/plugin-legacy": "^5.2.0",
+    "flowbite": "^2.2.1",
+    "flowbite-svelte": "^0.44.21",
+    "md5": "^2.3.0",
+    "svelte-spa-router": "^4.0.1",
+    "tailwind-merge": "^2.2.0",
+    "zx": "^7.2.3"
+  }
+}
