@@ -2,7 +2,6 @@
   import { Router, createRouter } from '@roxi/routify'
   import routes from '../.routify/routes.default.js'
   import data from '../android.json'
-  import Gerbang from './lib/kunci/src/Gerbang.svelte'
 
   export const router = createRouter({
     routes,
@@ -13,6 +12,4 @@
   })
 </script>
 
-<Gerbang namaAplikasi={data.title}>
-  <Router {router} />
-</Gerbang>
+<Router {router} />
